@@ -11,7 +11,8 @@ html {
 body {
 	background-color: $bg-color;
 	color: $text-color;
-	font-family: 'Manrope', sans-serif;
+	font-family: $font-family;
+	letter-spacing: $letter-spacing;
 	font-weight: 400;
 	margin: 0;
 }

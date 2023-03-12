@@ -121,15 +121,7 @@
         flex-wrap: nowrap;
         gap: 0.3rem;
 
-        svg {
-          width: 2rem;
-          height: 2rem;
-          stroke: $text-color;
-          path {
-            stroke: inherit;
-            stroke-width: 1.5;
-          }
-        }
+        @include icon();
       }
     }
   }
@@ -154,16 +146,7 @@
       width: 2rem;
       height: 2rem;
       
-      svg {
-        width: 2rem;
-        height: 2rem;
-        stroke: $text-color;
-
-        path {
-          stroke: inherit;
-          stroke-width: 1.5;
-        }
-      }
+      @include icon();
 
       &.nav-account, &.nav-locale {
         display: none;
