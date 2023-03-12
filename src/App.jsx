@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import { Header } from './components';
+import { Header, Footer } from './components';
 import { Home, ProductDetail, ProductList, AboutUs, Contact } from './pages';
 
 
@@ -48,6 +48,7 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
+			<Footer/>
     </>
   )
 }
