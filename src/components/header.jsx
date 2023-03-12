@@ -15,12 +15,14 @@ export const Header = () => {
     document.querySelector('.navigation').classList.toggle('open');
     document.querySelector('.overlay').classList.toggle('hide');
     document.querySelector('.nav-actions').classList.toggle('open');
+    document.querySelector('body').classList.toggle('overflow-hidden');
   }
 
   const closeMenu = () => {
     document.querySelector('.navigation').classList.remove('open');
     document.querySelector('.overlay').classList.add('hide');
     document.querySelector('.nav-actions').classList.remove('open');
+    document.querySelector('body').classList.remove('overflow-hidden');
   }
 
 	return (

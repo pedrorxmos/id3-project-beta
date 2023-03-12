@@ -3,3 +3,18 @@
     @content
   }
 }
+
+@mixin logo ($size: 25px, $color: $magenta-color) {
+  svg {
+    width: $size;
+    height: $size;
+
+    #eye-outline {
+      stroke: $color;
+    }
+
+    #eye-circle {
+      fill: $color;
+    }
+  }
+}
