@@ -1,0 +1,5 @@
+﻿@mixin mq ($mq-width: min-width, $width: 400px) {
+  @media screen and ($mq-width: $width) {
+    @content
+  }
+}
