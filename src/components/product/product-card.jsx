@@ -4,7 +4,7 @@
     <>
       <div className="product-card">
         <a href="#product-detail">
-          <img src="https://picsum.photos/168/200" alt="product image" />
+          <img src="https://source.unsplash.com/random/200x250/?makeup%20product%20eyeshadow" alt="product image" />
         </a>
         
         <div className="product-info">
