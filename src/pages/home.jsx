@@ -1,4 +1,4 @@
-﻿import { HeroBanner, ProductSlider } from '../components'
+﻿import { HeroBanner, ProductSlider, Community } from '../components'
 
 export const Home = () => {
 
@@ -11,6 +11,8 @@ export const Home = () => {
       <HeroBanner/>
       
       <ProductSlider title={'Best Sellers'} subtitle={"check what's trending right now!"} />
+
+      <Community/>
     </>
   )
 }
