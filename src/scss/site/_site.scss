@@ -25,3 +25,9 @@ main {
 		padding: 0 0 2.666667rem 0;
 	}
 } 
+
+.container {
+	@include d-flex(column, 32px);
+	padding-left: 27px;
+	padding-right: 27px;
+}

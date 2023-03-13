@@ -1,11 +1,12 @@
 ﻿.product-card {
-  @include d-flex(column, 1rem);
+  @include d-flex(column, 0);
   padding: 5px;
-
+  
   img {
     width: 168px;
     height: 200px;
     object-fit: cover;
+    margin: 0;
   }
 
   .product-info {
@@ -14,6 +15,7 @@
 
     .product-info__info {
       @include d-flex(column, 5px);
+      padding-top: 1rem;
 
       .product-info__category {
         font-size: 0.833333rem;
@@ -54,6 +56,7 @@
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       font-weight: 400;
+      width: 100%;
     }
   }
 }
