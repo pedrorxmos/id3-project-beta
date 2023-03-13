@@ -3,13 +3,13 @@
   return (
     <>
       <a href="#banner" className="herobanner">
-        <img src="https://picsum.photos/2000/1500" alt="hero banner"/>
+        <div className="herobanner__img"></div>
 
         <div className="herobanner__info">
           <h2>Title</h2>
-          <p>Herobanner text</p>
+          <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
 
-          <button>Shop Now</button>
+          <button className="btn btn-main">Shop Now</button>
         </div>
       </a>
     </>

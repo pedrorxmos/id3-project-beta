@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import { Header, Footer } from './components';
 import { Home, ProductDetail, ProductList, AboutUs, Contact } from './pages';

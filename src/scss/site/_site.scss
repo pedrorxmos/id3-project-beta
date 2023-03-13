@@ -18,6 +18,10 @@ body {
 }
 
 main {
-	margin-top: 85px;
+	margin-top: 75px;
 	padding: 2.666667rem 0;
+
+	&.home {
+		padding: 0 0 2.666667rem 0;
+	}
 } 
