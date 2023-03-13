@@ -2,9 +2,15 @@
 @import './site/variables';
 @import './site/mixins';
 @import './site/site';
+@import './site/headers';
 @import './site/typography';
 @import './site/lists';
 @import './site/topbar';
 @import './site/footer';
+
+@import './products/product-slider';
+@import './products/product-card';
+
+@import './promo/hero-banner.scss';
 
 @import './utilities.scss'

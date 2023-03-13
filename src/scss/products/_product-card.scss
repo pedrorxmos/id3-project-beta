@@ -1,0 +1,62 @@
+﻿.product-card {
+  @include d-flex(column, 1rem);
+  padding: 5px;
+
+  img {
+    width: 168px;
+    height: 200px;
+  }
+
+  .product-info {
+    @include d-flex(column, 32px);
+    padding: 0 5px;
+
+    .product-info__info {
+      @include d-flex(column, 5px);
+
+      .product-info__category {
+        font-size: 0.833333rem;
+        color: $grey-color;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      .product-info__name {
+        font-size: 1.083333rem;
+        color: $text-color;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .product-info__price {
+        font-size: 1.166667rem;
+        color: $text-color;
+        font-weight: 600;
+
+        span {
+          font-size: 0.833333em;
+          text-decoration: line-through;
+          color: $grey-color;
+
+          &:before {
+            content: '('
+          }
+
+          &:after {
+            content: ')'
+          }
+        }
+      }
+    }
+
+    .product-info__add-button {
+      background-color: $cyan-color;
+      border: 0;
+      padding: 0.5rem 1rem;
+      text-transform: uppercase;
+      font-size: 1.166667rem;
+      font-weight: 400;
+      color: $text-color;
+    }
+  }
+}

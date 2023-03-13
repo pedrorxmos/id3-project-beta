@@ -5,7 +5,6 @@ import { Home, ProductDetail, ProductList, AboutUs, Contact } from './pages';
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   const router = createBrowserRouter([
 		{

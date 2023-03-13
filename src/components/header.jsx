@@ -9,8 +9,9 @@ import {ReactComponent as CloseIcon} from '../assets/icons/close.svg'
 import {ReactComponent as FlagIcon} from '../assets/icons/flag.svg'
 
 
-export const Header = () => {
+export const Header = ({ router }) => {
 
+  console.log(router);
   const toggleMenu = () => {
     document.querySelector('.navigation').classList.toggle('open');
     document.querySelector('.overlay').classList.toggle('hide');
