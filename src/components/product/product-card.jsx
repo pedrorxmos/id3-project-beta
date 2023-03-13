@@ -22,7 +22,7 @@
             </div>
           </a>
           
-          <button className="product-info__add-button">
+          <button className="btn btn-secondary product-info__add-button">
             Add to bag
           </button>
         </div>

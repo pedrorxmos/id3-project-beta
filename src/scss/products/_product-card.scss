@@ -51,13 +51,9 @@
     }
 
     .product-info__add-button {
-      background-color: $cyan-color;
-      border: 0;
-      padding: 0.5rem 1rem;
-      text-transform: uppercase;
-      font-size: 1.166667rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
       font-weight: 400;
-      color: $text-color;
     }
   }
 }
