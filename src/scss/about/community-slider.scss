@@ -32,10 +32,12 @@
 
         span {
           position: absolute;
-          right: 0.25rem;
+          right: 0.5rem;
           bottom: 0.25rem;
           color: $bg-color;
           font-weight: 600;
+          font-size: 1.166667rem;
+          text-shadow: 0px 0px 3px $text-color;
         }
       }
     }
