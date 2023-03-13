@@ -1,5 +1,5 @@
 ﻿import {Outlet} from 'react-router';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 import {ReactComponent as Logo} from '../assets/favicon.svg';
 import {ReactComponent as BagIcon} from '../assets/icons/bag.svg'
@@ -11,7 +11,6 @@ import {ReactComponent as FlagIcon} from '../assets/icons/flag.svg'
 
 export const Header = ({ router }) => {
 
-  console.log(router);
   const toggleMenu = () => {
     document.querySelector('.navigation').classList.toggle('open');
     document.querySelector('.overlay').classList.toggle('hide');
@@ -87,7 +86,7 @@ export const Header = ({ router }) => {
 
       <div className="overlay hide" onClick={closeMenu}></div>
 
-			<main>
+			<main className={useLocation().pathname == '/' ? 'home' : ''}>
 				<Outlet />
 			</main>
 		</>
