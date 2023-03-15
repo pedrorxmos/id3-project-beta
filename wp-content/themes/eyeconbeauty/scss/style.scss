@@ -1,0 +1,33 @@
+﻿/*
+Theme Name: Eyecon Beauty
+Description: Tema para el proyecto Eyecon Beauty - Project Beta.
+Author: Pedro Ramos
+Author URI: https://github.com/pedrorxmos/id3-project-beta
+Version: 1.0
+Text Domain: eyecon
+*/
+
+@import './site/fonts';
+@import './site/variables';
+@import './site/mixins';
+@import './site/site';
+@import './site/headers';
+@import './site/typography';
+@import './site/lists';
+@import './site/buttons';
+
+@import './site/topbar';
+@import './site/footer';
+
+@import './products/product-list';
+@import './products/product-detail';
+@import './products/product-slider';
+@import './products/product-card';
+@import './products/product-wrapper';
+@import './products/image-slider';
+
+@import './about/community-slider';
+
+@import './promo/hero-banner';
+
+@import './utilities'

@@ -1,0 +1,38 @@
+﻿*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 12px;
+}
+
+body {
+	background-color: $bg-color;
+	color: $text-color;
+	font-family: $font-family;
+	letter-spacing: $letter-spacing;
+	font-weight: 400;
+	margin: 0;
+
+	main {
+		margin-top: 75px;
+		padding: 2.666667rem 0;
+	} 
+
+	&.home {
+		main {
+			padding: 0 0 2.666667rem 0;
+		}
+	}
+}
+
+
+
+.container {
+	@include d-flex(column, 0);
+	padding-left: 27px;
+	padding-right: 27px;
+	padding-bottom: 27px;
+}

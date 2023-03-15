@@ -1,0 +1,14 @@
+/wp-content/themes/eyeconbeauty/node_modules
+/wp-content/themes/eyeconbeauty/*.css
+/wp-content/themes/eyeconbeauty/*.css.map
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
