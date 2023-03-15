@@ -31,50 +31,15 @@
             Follow eyecon beauty everywhere
           </h3>
           <div class="socialmedia-links">
-          <?php
+            <?php
                     
-                wp_nav_menu ( array
-                (
-                    'theme_location' => 'socialmedia-menu',
-                    'container' => false
-                ));
+              wp_nav_menu ( array
+              (
+                'theme_location' => 'socialmedia-menu',
+                'container' => false
+              ));
                 
             ?>
-            <!-- <?php 
-
-              $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
-              // This returns an array of menu locations ([LOCATION_NAME] = MENU_ID);
-
-              $menuID = $menuLocations['socialmedia-menu']; // Get the *primary* menu ID
-
-              $socialmedia = wp_get_nav_menu_items($menuID); // Get the array of wp objects, the nav items for our queried location.
-
-              foreach ( $socialmedia as $navItem ) {
-
-                // $icon = get_field('svg-icon-code', $navItem)
-
-                echo '<li><a href="'.$navItem->url.'" title="'.$navItem->title.'">'.$navItem->svg_icon_code.'</a></li>';
-            
-              }
-            ?> -->
-            <!-- <a href="https://www.instagram.com/" target="_blank">
-              <InstagramIcon/>
-            </a>
-            <a href="https://www.twitter.com/" target="_blank">
-              <TwitterIcon/>
-            </a>
-            <a href="https://www.tiktok.com/" target="_blank">
-              <TiktokIcon/>
-            </a>
-            <a href="https://www.pinterest.com/" target="_blank">
-              <PinterestIcon/>
-            </a>
-            <a href="https://www.youtube.com/" target="_blank">
-              <YoutubeIcon/>
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-              <FacebookIcon/>
-            </a> -->
           </div>
         </div>
       </div>
