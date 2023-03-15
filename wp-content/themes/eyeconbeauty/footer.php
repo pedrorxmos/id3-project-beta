@@ -1,4 +1,4 @@
-﻿  <footer>
+  <footer>
     <div class="footer-group">
       <div class="footer-info">
         <div class="footer-newsletter">
@@ -119,7 +119,6 @@
       © 2023 Eyecon Beauty. All rights reserved
     </div>
   </footer>
-  
   <?php wp_footer(); ?>
 </body>
 

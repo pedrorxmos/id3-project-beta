@@ -1,15 +1,16 @@
-﻿<?php
+<?php
 
 //  CARGAR JS Y CSS
 
     function my_scripts_and_css()
     {
-
         //  QUITAR GUTENBERG CSS
 
         wp_dequeue_style ( 'wp-block-library' );
         wp_dequeue_style ( 'wp-block-library-theme' );
         wp_dequeue_style ( 'wc-blocks-style' );
+
+        add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
         //  CARGA MIS ESTILOS Y CSS 
         
@@ -166,6 +167,6 @@
     //     'parent_slug' => 'config',
     // ));
 
-
-		// add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
+    
+  
 ?>

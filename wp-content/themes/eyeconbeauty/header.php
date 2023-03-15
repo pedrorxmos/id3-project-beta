@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html <?php language_attributes(); ?>>
 
 <head>
@@ -37,26 +37,6 @@
           'container' => false
         ));  
       ?>
-
-      <!-- <ul class="nav-list">
-        <li class="nav-item">
-          <a href="#shop">Shop</a>
-          <ul class="nav-sublist">
-            <li class="nav-subitem">
-              <a href="#shop-singular">Singular Shadows</a>
-            </li>
-            <li class="nav-subitem">
-              <a href="#shop-palettes">Eyeshadow palettes</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a href="#aboutus">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a href="#Contact">Contact</a>
-        </li>
-      </ul> -->
 
       <ul class="nav-list-actions">
         <li class="nav-item-action nav-account">
@@ -102,5 +82,4 @@
       </a>
     </div>
   </header>
-
   <div class="overlay hide" ></div>
