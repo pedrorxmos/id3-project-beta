@@ -13,7 +13,7 @@
 
 <body <?php body_class(); ?>>
   <header class='topbar'>
-    <a href="#"
+    <a href="<?php echo home_url(); ?>"
        class="logo">
       <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_111_4882)">
