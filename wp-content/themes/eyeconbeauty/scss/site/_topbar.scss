@@ -64,7 +64,7 @@
       right: 0;
     }
 
-    .nav-list {
+    .menu-list {
       display: flex;
       flex-direction: column;
       gap: 2.666667rem;
@@ -74,7 +74,7 @@
         justify-content: center;
       }
 
-      .nav-item {
+      .menu-item {
         font-size: 1.333333rem;
         font-weight: 600;
         display: flex;
@@ -83,9 +83,15 @@
 
         @include mq(min-width, 1024px){
           font-weight: 400;
+
+          &:hover {
+            .sub-menu {
+              display: flex;
+            }
+          }
         }
 
-        .nav-sublist {
+        .sub-menu {
           display: flex;
           flex-direction: column;
           gap: 1.333333rem;
@@ -95,7 +101,7 @@
           }
           
 
-          .nav-subitem {
+          .menu-item {
             font-size: 1.166667rem;
             font-weight: 400;
           }

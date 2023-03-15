@@ -30,7 +30,15 @@
     </a>
 
     <nav class="navigation">
-      <ul class="nav-list">
+      <?php        
+        wp_nav_menu ( array (
+          'theme_location' => 'header-menu',
+          'menu_class' => 'menu menu-list',
+          'container' => false
+        ));  
+      ?>
+
+      <!-- <ul class="nav-list">
         <li class="nav-item">
           <a href="#shop">Shop</a>
           <ul class="nav-sublist">
@@ -48,7 +56,7 @@
         <li class="nav-item">
           <a href="#Contact">Contact</a>
         </li>
-      </ul>
+      </ul> -->
 
       <ul class="nav-list-actions">
         <li class="nav-item-action nav-account">
