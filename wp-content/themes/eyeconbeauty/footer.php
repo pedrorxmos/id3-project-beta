@@ -32,13 +32,11 @@
           </h3>
           <div class="socialmedia-links">
             <?php
-                    
               wp_nav_menu ( array
               (
                 'theme_location' => 'socialmedia-menu',
                 'container' => false
               ));
-                
             ?>
           </div>
         </div>
@@ -48,21 +46,35 @@
           <ul class="nav-group">
             <li class="nav-item">
               Shop
+              <?php
+                wp_nav_menu ( array
+                (
+                  'theme_location' => 'shop-menu',
+                  'container' => false
+                ));
+              ?>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               Singular Shadows
             </li>
             <li class="nav-item">
               Eyeshadow palettes
-            </li>
+            </li> -->
           </ul>
 
           <ul class="nav-group">
             <li class="nav-item">
               Help
+              <?php
+                wp_nav_menu ( array
+                (
+                  'theme_location' => 'help-menu',
+                  'container' => false
+                ));
+              ?>
             </li>
-            <li class="nav-item">Contact Us</li>
-            <li class="nav-item">F.A.Q</li>
+            <!-- <li class="nav-item">Contact Us</li>
+            <li class="nav-item">F.A.Q</li> -->
           </ul>
         </div>
 
@@ -71,19 +83,33 @@
           <ul class="nav-group">
             <li class="nav-item">
               Company
+              <?php
+                wp_nav_menu ( array
+                (
+                  'theme_location' => 'company-menu',
+                  'container' => false
+                ));
+              ?>
             </li>
-            <li class="nav-item">About us</li>
-            <li class="nav-item">Sustainability</li>
+            <!-- <li class="nav-item">About us</li>
+            <li class="nav-item">Sustainability</li> -->
           </ul>
 
           <ul class="nav-group">
             <li class="nav-item">
               Legal
+              <?php
+                wp_nav_menu ( array
+                (
+                  'theme_location' => 'legal-menu',
+                  'container' => false
+                ));
+              ?>
             </li>
-            <li class="nav-item">Terms & Conditions</li>
+            <!-- <li class="nav-item">Terms & Conditions</li>
             <li class="nav-item">Privacy Policy</li>
             <li class="nav-item">Cookies Policy</li>
-            <li class="nav-item">Return Policy</li>
+            <li class="nav-item">Return Policy</li> -->
           </ul>
         </div>
       </div>

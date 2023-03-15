@@ -104,11 +104,15 @@
       flex: 1 1 0;
 
       .nav-group {
-        @include d-flex(column, 2px);
 
-
-        .nav-item:first-child {
+        .nav-item {
           font-weight: 700;
+          @include d-flex(column, 2px);
+          
+          .menu {
+            @include d-flex(column, 2px);
+            font-weight: 400;
+          }
         }
       }
     }
