@@ -1,5 +1,5 @@
 ﻿<?php get_header(); ?>
   <main>
-    404.php
+    page-shop.php
   </main>
 <?php get_footer(); ?>
