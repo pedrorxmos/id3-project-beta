@@ -1,6 +1,7 @@
 .product-card {
   @include d-flex(column, 0);
   padding: 5px;
+  max-width: 178px;
   
   img {
     width: 168px;
@@ -11,7 +12,7 @@
   }
 
   .product-info {
-    @include d-flex(column, 32px);
+    @include d-flex(column, 2rem);
     padding: 0 5px;
 
     .product-info__info {
@@ -28,16 +29,19 @@
       .product-info__name {
         font-size: 1.083333rem;
         color: $text-color;
+        overflow: hidden;
+        height: 3rem;
         font-weight: 600;
         text-transform: uppercase;
       }
 
       .product-info__price {
+        
         font-size: 1.166667rem;
         color: $text-color;
         font-weight: 600;
 
-        span {
+        .price__discount {
           font-size: 0.833333em;
           text-decoration: line-through;
           color: $grey-color;

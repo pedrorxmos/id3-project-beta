@@ -45,7 +45,7 @@
         <div class="footer-col">
           <ul class="nav-group">
             <li class="nav-item">
-              Shop
+              <a href="<?php echo home_url ( '/shop/' ); ?>">Shop</a>
               <?php
                 wp_nav_menu ( array
                 (
