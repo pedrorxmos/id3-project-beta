@@ -1,1 +1,1 @@
-﻿page.php
+page.php

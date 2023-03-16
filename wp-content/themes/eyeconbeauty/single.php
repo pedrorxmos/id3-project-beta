@@ -1,1 +1,1 @@
-﻿single.php
+single.php
