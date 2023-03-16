@@ -3,10 +3,8 @@
   // echo $id;
   // echo $args['slug'];
 
-  $page = get_posts(array(
-    'name' => $args['slug'],
-  ));
-  echo $page->post_content;
+  $page = get_page_by_path( $args['slug'], OBJECT, 'hero-banner' );
+  $id = $page->ID;
 ?>
 
 <a href="#banner" class="herobanner">
