@@ -1,0 +1,22 @@
+{
+  "name": "eyeconbeauty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch ./scss:./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrorxmos/id3-project-beta.git"
+  },
+  "author": "Pedro Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrorxmos/id3-project-beta/issues"
+  },
+  "homepage": "https://github.com/pedrorxmos/id3-project-beta#readme",
+  "dependencies": {
+    "sass": "^1.59.3"
+  }
+}
