@@ -1,0 +1,35 @@
+.herobanner {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  height: 350px;
+  margin-bottom: calc(50px + 2.666667rem);
+  z-index: 0;
+
+  .herobanner__img {
+    // background-image: url('https://source.unsplash.com/random/1024x1024/?makeup');
+    background-size: cover;
+    width: 100%;
+    z-index: 0;
+    
+  }
+
+  .herobanner__info {
+    position: absolute;
+    bottom: -50px;
+    right: 10%;
+    left: 10%;
+    background-color: lighten($yellow-color, 35);
+    @include d-flex(column, 0.5rem);
+    padding: 2.5rem;
+    align-items: center;
+    text-align: center;
+    // text-transform: uppercase;
+    font-weight: 500;
+    z-index: 0;
+
+    button {
+      margin-top: 2rem;
+    }
+  }
+}
