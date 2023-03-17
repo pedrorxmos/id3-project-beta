@@ -1,5 +1,9 @@
 <?php 
 
+	function disable_woocommerce_styles() {
+		add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+	}
+	add_action ( 'init', 'disable_woocommerce_styles' );
   //  CARGAR JS Y CSS
 
 	function my_scripts_and_css()
@@ -9,8 +13,6 @@
 		wp_dequeue_style ( 'wp-block-library' );
 		wp_dequeue_style ( 'wp-block-library-theme' );
 		wp_dequeue_style ( 'wc-blocks-style' );
-
-		add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 		//  CARGA MIS ESTILOS Y CSS 
 		
