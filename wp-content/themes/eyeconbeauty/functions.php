@@ -120,19 +120,10 @@
 
 	add_action ( 'init', 'my_custom_post_types_and_taxonomies' );
 
-	/**
- *  Function to get post ID By slug 
- */ 
-
-function get_post_id_by_slug($slug) {
-
-	$post = get_page_by_path($slug);
-
-	if ($post) {
-		return $page->ID;
-	} else {
-		return null;
+	function mytheme_add_woocommerce_support() {
+		add_theme_support( 'woocommerce' );
 	}
-}
+
+	add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 ?>
