@@ -51,7 +51,7 @@ get_header( );
 </header>
 
 
-<div class="product-list">
+
 <?php
 // echo 'archive';
 if ( woocommerce_product_loop() ) {
@@ -73,7 +73,7 @@ if ( woocommerce_product_loop() ) {
 
 	woocommerce_product_loop_end();
 ?>
-</div>
+
 
 <?php 	/**
 	 * Hook: woocommerce_after_shop_loop.
@@ -108,4 +108,4 @@ do_action( 'woocommerce_after_main_content' );
 
 </main>
 
-<?php get_footer( 'shop' ); ?>
+<?php get_footer(  ); ?>

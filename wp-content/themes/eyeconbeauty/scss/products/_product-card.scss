@@ -1,7 +1,7 @@
 .product-card {
   @include d-flex(column, 0);
   padding: 5px;
-  max-width: 178px;
+  //max-width: 178px;
   
   img {
     width: 168px;
@@ -57,11 +57,12 @@
       }
     }
 
-    .product-info__add-button {
+    .add_to_cart_button {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       font-weight: 400;
       width: 100%;
+      text-align: center;
     }
   }
 }

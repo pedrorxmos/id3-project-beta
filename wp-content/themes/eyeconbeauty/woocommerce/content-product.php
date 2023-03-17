@@ -36,7 +36,15 @@ if ( empty( $product ) || ! $product->is_visible() ) {
             <a href="<?php the_permalink() ?>">
               <div class="product-info__info">
                 <p class="product-info__category">
-                  Category
+                  <!-- Category  -->
+									<?php
+									$terms = get_the_terms( $product->ID, 'product_cat' );
+									foreach ($terms as $term) {
+											$product_cat_id = $term->term_id;
+											echo get_the_category_by_ID($product_cat_id);
+											break;
+									} 
+									?>
                 </p>
                 <p class="product-info__name">
                   <?php the_title(); ?>
@@ -52,11 +60,11 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                 </div>
               </div>
             </a>
-            
-            <button class="btn btn-secondary product-info__add-button">
-              Add to bag
-            </button>
+
+						<?php do_action( 'woocommerce_after_shop_loop_item' ); 
+						?>
           </div>
+
 	<!-- <?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
