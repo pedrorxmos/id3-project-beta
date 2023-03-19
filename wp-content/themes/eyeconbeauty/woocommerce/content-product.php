@@ -25,8 +25,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<!-- <?php wc_product_class( '', $product ); ?> -->
-<li class="product-card">
+<div <?php wc_product_class( 'product-card ', $product ); ?>>
 
 <a href="<?php the_permalink() ?>">
             <?php the_post_thumbnail() ?>
@@ -104,4 +103,4 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?> -->
-</li>
+</div>
