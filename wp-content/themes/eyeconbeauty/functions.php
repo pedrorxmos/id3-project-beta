@@ -122,10 +122,27 @@
 
 	add_action ( 'init', 'my_custom_post_types_and_taxonomies' );
 
+	//ADD WOOCOMMERCE SUPPORT TO MY THEME
+
 	function mytheme_add_woocommerce_support() {
 		add_theme_support( 'woocommerce' );
 	}
 
 	add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+
+	// RENAME SORTING OPTIONS OF PRODUCT LIST
+		
+	function bbloomer_rename_sorting_option_woocommerce_shop( $options ) {
+		$options['menu_order'] = 'Default';  
+		$options['popularity'] = 'Best Sellers';  
+		$options['rating'] = 'Top Rated';   
+		$options['date'] = 'Newest';  
+		$options['price'] = 'Lowest Price';  
+		$options['price-desc'] = 'Highest Price';  
+		return $options;
+	}
+
+	add_filter( 'woocommerce_catalog_orderby', 'bbloomer_rename_sorting_option_woocommerce_shop' );
 
 ?>

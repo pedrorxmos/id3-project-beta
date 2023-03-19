@@ -1,16 +1,19 @@
 .collection-control {
   @include d-flex(row, 0);
   justify-content: space-between;
+  align-items: center;
   padding: 0 27px 2rem;
 
   .woocommerce-ordering {
     position: relative;
     @include d-flex(row, 0);
     justify-content: flex-end;
+    padding: 0.2rem 0.5rem;
+    border-bottom: 1px solid $text-color;
 
     svg {
       position: absolute;
-      right: 12px;
+      right: 0.5rem;
       top: calc(50% - 0.5rem);
       width: 1.166667rem;
       height: 1.166667rem;
@@ -26,14 +29,12 @@
       appearance: none;
       -o-appearance: none;
       -webkit-appearance: none;
-      padding: 0;
-      padding-right: 30px;
+      padding: 0 30px 0 0;
       background-color: $bg-color;
       border: none;
       width:min-content;
       color: $text-color;
-      text-align-last: right; 
-      //text-align: end;
+      
       font-family: $font-family;
       font-size: 1rem;
 
