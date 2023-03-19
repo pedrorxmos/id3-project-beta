@@ -27,7 +27,7 @@ get_header( );
  * @hooked woocommerce_breadcrumb - 20
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
-// do_action( 'woocommerce_before_main_content' );
+  //do_action( 'woocommerce_before_main_content' );
 
 ?>
  
@@ -46,15 +46,38 @@ get_header( );
 	 * @hooked woocommerce_taxonomy_archive_description - 10
 	 * @hooked woocommerce_product_archive_description - 10
 	 */
-	// do_action( 'woocommerce_archive_description' );
+	//do_action( 'woocommerce_archive_description' );
 	?>
 </header>
 
 
 
 <?php
-// echo 'archive';
+
 if ( woocommerce_product_loop() ) {
+
+?>
+
+	<div class="collection-control">
+		
+		<?php 
+		woocommerce_result_count();
+		woocommerce_catalog_ordering();
+		?>
+
+	</div>
+
+<?php 	
+
+	/**
+	 * Hook: woocommerce_before_shop_loop.
+	 *
+	 * @hooked woocommerce_output_all_notices - 10
+	 * @hooked woocommerce_result_count - 20
+	 * @hooked woocommerce_catalog_ordering - 30
+	 */
+	//do_action( 'woocommerce_before_shop_loop' );
+	
 
 	woocommerce_product_loop_start();
 	

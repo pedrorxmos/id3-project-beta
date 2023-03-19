@@ -1,0 +1,52 @@
+.collection-control {
+  @include d-flex(row, 0);
+  justify-content: space-between;
+  padding: 0 27px 2rem;
+
+  .woocommerce-ordering {
+    position: relative;
+    @include d-flex(row, 0);
+    justify-content: flex-end;
+
+    svg {
+      position: absolute;
+      right: 12px;
+      top: calc(50% - 0.5rem);
+      width: 1.166667rem;
+      height: 1.166667rem;
+      stroke-width: 1.5px;
+      stroke: $text-color;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    .orderby {
+      appearance: none;
+      -o-appearance: none;
+      -webkit-appearance: none;
+      padding: 0;
+      padding-right: 30px;
+      background-color: $bg-color;
+      border: none;
+      width:min-content;
+      color: $text-color;
+      text-align-last: right; 
+      //text-align: end;
+      font-family: $font-family;
+      font-size: 1rem;
+
+      
+      // width: 100%;
+      // border: 1px solid #E8EAED;
+      // border-radius: 5px;
+      // background: white;
+      // box-shadow: 0 1px 3px -2px #9098A9;
+      // cursor: pointer;
+      // font-family: inherit;
+      // font-size: 16px;
+      // transition: all 150ms ease;
+    }
+  }
+}
