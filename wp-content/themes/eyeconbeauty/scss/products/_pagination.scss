@@ -1,0 +1,25 @@
+.woocommerce-pagination {
+  padding: 2rem 27px 0;
+
+  .page-numbers {
+    @include d-flex(row, 1.333333rem);
+    justify-content: center;
+
+    li {
+      font-size: 1.166667rem;
+      span {
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 0.333333rem;
+        color: $text-color;
+      }
+      .current {
+        background-color: $magenta-color;
+        font-weight: 600;
+        color: $bg-color;
+      }
+
+    }
+  }
+  
+}
