@@ -1,4 +1,3 @@
-content-single-product.php
 <?php
 /**
  * The template for displaying product content in the single-product.php template
@@ -41,10 +40,10 @@ if ( post_password_required() ) {
 	 * @hooked woocommerce_show_product_sale_flash - 10
 	 * @hooked woocommerce_show_product_images - 20
 	 */
-	do_action( 'woocommerce_before_single_product_summary' );
+	//do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div class="summary entry-summary">
+	<!-- <div class="summary entry-summary">
 		<?php
 		/**
 		 * Hook: woocommerce_single_product_summary.
@@ -58,8 +57,14 @@ if ( post_password_required() ) {
 		 * @hooked woocommerce_template_single_sharing - 50
 		 * @hooked WC_Structured_Data::generate_product_data() - 60
 		 */
-		do_action( 'woocommerce_single_product_summary' );
+		//do_action( 'woocommerce_single_product_summary' );
 		?>
+	</div> -->
+
+	<div class="container">
+		<?php woocommerce_template_single_title(); ?>
+		<h3><?php echo wc_get_product_category_list( $product->get_id(), ', ', '' . _n( '', '', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '' ); ?></h3>
+		
 	</div>
 
 	<?php
