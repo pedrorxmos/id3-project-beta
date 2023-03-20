@@ -1,0 +1,9 @@
+.error-container {
+  padding: 10rem 4.5rem;
+  @include d-flex(column, 3rem);
+  text-align: center;
+
+  .error__info {
+    @include d-flex(column, 0.5rem);
+  }
+}

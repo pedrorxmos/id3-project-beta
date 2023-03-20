@@ -82,7 +82,6 @@ $base_var = (get_the_title() === 'Shimmer') ? 'bottle' : 'lavender-haze';
      
 				// Display result
 				$var = $params['attribute_pa_shade'];
-
 				?>
 					<div class="image-carousel__img">
 						<a href="https://esatdev.com/2022/pedroramos/eyeconbeauty/wp-content/uploads/2023/03/4shade.webp" id="variable-img-top-view-link">
@@ -92,6 +91,7 @@ $base_var = (get_the_title() === 'Shimmer') ? 'bottle' : 'lavender-haze';
 					</div>
 
 					<div class="image-carousel__img">
+						
 						<a href="https://esatdev.com/2022/pedroramos/eyeconbeauty/wp-content/uploads/2023/03/4shade.webp" id="variable-img-side-view-link">
 							<img src="https://esatdev.com/2022/pedroramos/eyeconbeauty/wp-content/uploads/2023/03/<?php echo $var ? $var : $base_var ?>-side.webp" alt="Eyeshadow Side View" id="variable-img-side-view-img">
 						</a>	
@@ -100,3 +100,5 @@ $base_var = (get_the_title() === 'Shimmer') ? 'bottle' : 'lavender-haze';
 			}
 		?>
 </div>
+
+

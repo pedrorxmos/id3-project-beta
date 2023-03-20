@@ -13,7 +13,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>  onLoad="onLoadImgs()">
+<body <?php body_class(); ?>>
   <header class='topbar'>
     <a href="<?php echo home_url(); ?>"
        class="logo">
