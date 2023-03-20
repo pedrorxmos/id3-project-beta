@@ -37,8 +37,12 @@ $wrapper_classes   = apply_filters(
 );
 
 $attachment_ids = $product->get_gallery_image_ids();
+$actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+$base_var = (get_the_title() === 'Shimmer') ? 'bottle' : 'lavender-haze';
 ?>
-<div class="image-carousel <?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>">
+<div class="image-carousel carousel <?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>">
+	<div class="image-carousel__img">
 		<?php
 			if ( $post_thumbnail_id ) {
 				$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
@@ -49,48 +53,50 @@ $attachment_ids = $product->get_gallery_image_ids();
 			}
 
 			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
-
+		?>
+		</div>
+		<?php
 
 			foreach( $attachment_ids as $attachment_id ) 
 			{
 				?>
 					<div class="image-carousel__img">
 				<?php
-					echo wp_get_attachment_image($attachment_id, 'full');
+
+					if ( $attachment_id ) {
+						$html = wc_get_gallery_image_html( $attachment_id, true );
+					} else {
+						$html  = '<div class="image-carousel__img woocommerce-product-gallery__image--placeholder">';
+						$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
+						$html .= '</div>';
+					}
+					echo apply_filters( 'woocommerce_single_product_image_gallery_html', $html, $post_thumbnail_id );
 				?>
+					</div>
+				<?php
+			}
+			if ( $product->is_type( 'variable' ) ) {
+
+				$url_components = parse_url($actual_link);
+				parse_str($url_components['query'], $params);
+     
+				// Display result
+				$var = $params['attribute_pa_shade'];
+
+				?>
+					<div class="image-carousel__img">
+						<a href="https://esatdev.com/2022/pedroramos/eyeconbeauty/wp-content/uploads/2023/03/4shade.webp" id="variable-img-top-view-link">
+							<img src="https://esatdev.com/2022/pedroramos/eyeconbeauty/wp-content/uploads/2023/03/<?php echo $var ? $var : $base_var ?>-top.webp" alt="Eyeshadow Top View"
+							id="variable-img-top-view-img">
+						</a>	
+					</div>
+
+					<div class="image-carousel__img">
+						<a href="https://esatdev.com/2022/pedroramos/eyeconbeauty/wp-content/uploads/2023/03/4shade.webp" id="variable-img-side-view-link">
+							<img src="https://esatdev.com/2022/pedroramos/eyeconbeauty/wp-content/uploads/2023/03/<?php echo $var ? $var : $base_var ?>-side.webp" alt="Eyeshadow Side View" id="variable-img-side-view-img">
+						</a>	
 					</div>
 				<?php
 			}
 		?>
 </div>
-
-<?php //the_post_thumbnail() ?>
-<!-- 
-<div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<figure class="woocommerce-product-gallery__wrapper">
-		<?php
-		if ( $post_thumbnail_id ) {
-			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
-		} else {
-			$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
-			$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
-			$html .= '</div>';
-		}
-
-		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
-
-		$attachment_ids = $product->get_gallery_image_ids();
-
-		foreach( $attachment_ids as $attachment_id ) 
-    {
-				// Display the image URL
-				echo $Original_image_url = wp_get_attachment_url( $attachment_id );
-
-				// Display Image instead of URL
-				echo wp_get_attachment_image($attachment_id, 'full');
-
-    }
-		//do_action( 'woocommerce_product_thumbnails' );
-		?>
-	</figure>
-</div> -->

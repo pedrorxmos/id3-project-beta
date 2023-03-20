@@ -21,10 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-// <button class="btn btn-secondary product-info__add-button">
-//               Add to bag
-//             </button>
-
 echo apply_filters(
 	'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
 	sprintf(
