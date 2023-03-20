@@ -136,7 +136,7 @@
 	// RENAME SORTING OPTIONS OF PRODUCT LIST
 		
 	function bbloomer_rename_sorting_option_woocommerce_shop( $options ) {
-		$options['menu_order'] = 'Default';  
+		$options['menu_order'] = 'Staff Faves';  
 		$options['popularity'] = 'Best Sellers';  
 		$options['rating'] = 'Top Rated';   
 		$options['date'] = 'Newest';  
