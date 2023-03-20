@@ -8,6 +8,8 @@
   <meta name="theme-color"
         content="#FEFEFE">
 
+  <?php the_field( 'site_head_scripts_styles', 'option' ) ?>
+
   <?php wp_head(); ?>
 </head>
 

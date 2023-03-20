@@ -61,12 +61,15 @@ if ( post_password_required() ) {
 		?>
 	</div> -->
 
-	<div class="container">
+	<div class="container product-title-top">
 		<?php woocommerce_template_single_title(); ?>
 		<h3><?php echo wc_get_product_category_list( $product->get_id(), ', ', '' . _n( '', '', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '' ); ?></h3>
-		
 	</div>
 
+	<?php
+		woocommerce_show_product_images();
+		woocommerce_template_single_add_to_cart();
+	?>
 	<?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.

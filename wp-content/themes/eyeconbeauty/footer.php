@@ -119,6 +119,7 @@
       © 2023 Eyecon Beauty. All rights reserved
     </div>
   </footer>
+  <?php the_field( 'site_footer_scripts_styles', 'option' ) ?>
   <?php wp_footer(); ?>
 </body>
 

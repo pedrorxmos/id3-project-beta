@@ -24,6 +24,7 @@
 	
 			// wp_enqueue_style ( 'css-main', get_stylesheet_uri() );
 			wp_enqueue_script ( 'js-topbar', get_stylesheet_directory_uri() . '/js/topbar.js', array('jquery'), '1.0.0', true, true );
+			wp_enqueue_script ( 'js-carousel', get_stylesheet_directory_uri() . '/js/carousel.js', array('jquery'), '1.0.0', true, true );
 			wp_enqueue_style ( 'css-main', get_stylesheet_uri(), '', filemtime ( get_template_directory() . '/style.css' ) );
 
 		}
@@ -144,5 +145,27 @@
 	}
 
 	add_filter( 'woocommerce_catalog_orderby', 'bbloomer_rename_sorting_option_woocommerce_shop' );
+
+
+	//  ACTIVACIÓN DE LAS PÁGINAS DE OPCIONES DE ACF
+    
+	acf_add_options_page ( array
+	(
+			'page_title' => 'Configuración del sitio web',
+			'menu_slug' => 'config'
+	));
+	
+	acf_add_options_sub_page ( array
+	(
+			'page_title' => 'Personalización',
+			'parent_slug' => 'config',
+	));
+	
+	acf_add_options_sub_page ( array
+	(
+			'page_title' => 'Scripts & Styles',
+			'parent_slug' => 'config',
+	));
+
 
 ?>
