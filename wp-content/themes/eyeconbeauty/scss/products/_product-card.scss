@@ -1,7 +1,11 @@
 .product-card {
   @include d-flex(column, 0);
   padding: 5px;
-  max-width: 50%;
+  width: 50%;
+
+  &.product-slider__card {
+    width: 178px;
+  }
   
   img {
     width: 100%;
