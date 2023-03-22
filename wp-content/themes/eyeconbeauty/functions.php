@@ -212,4 +212,12 @@
 			return $tabs;
 	}
 
+	//REMOVE THE LINK FROM WOOCOMMERCE IMAGES
+
+	add_filter( 'woocommerce_single_product_image_thumbnail_html', 'custom_remove_product_link' );
+	add_filter( 'woocommerce_single_product_image_gallery_html', 'custom_remove_product_link' );
+	function custom_remove_product_link( $html ) {
+		return strip_tags( $html, '<div><img>' );
+	}
+
 ?>
