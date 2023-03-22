@@ -39,6 +39,7 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
 
 	</button>
 	<p class="info-group__content">
-		Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim
+		<?php echo get_the_content() ?>
 	</p>
 </div>
+
