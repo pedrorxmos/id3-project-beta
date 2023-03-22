@@ -23,8 +23,22 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
 
 ?>
 
-<?php if ( $heading ) : ?>
-	<h2><?php echo esc_html( $heading ); ?></h2>
-<?php endif; ?>
+<div class="info-group">
+	<button class="info-group__toggle">
+	<?php if ( $heading ) : ?>
+	<?php echo esc_html( $heading ); ?>
+	<?php endif; ?>
+		
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="toggle-icon minus">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+		</svg>
 
-<?php the_content(); ?>
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="toggle-icon plus">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+		</svg>
+
+	</button>
+	<p class="info-group__content">
+		Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim
+	</p>
+</div>

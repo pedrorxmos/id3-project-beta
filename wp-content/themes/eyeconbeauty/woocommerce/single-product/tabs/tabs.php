@@ -27,8 +27,16 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see woocommerce_default_product_tabs()
  */
 $product_tabs = apply_filters( 'woocommerce_product_tabs', array() );
-
+?>
+		
+<?php
 if ( ! empty( $product_tabs ) ) : ?>
+
+	<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
+		<?php
+			call_user_func( $product_tab['callback'], $key, $product_tab );
+		?>
+	<?php endforeach; ?>
 
 	<div class="woocommerce-tabs wc-tabs-wrapper">
 		<ul class="tabs wc-tabs" role="tablist">

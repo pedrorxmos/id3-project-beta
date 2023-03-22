@@ -26,6 +26,7 @@
 			wp_enqueue_script ( 'js-topbar', get_stylesheet_directory_uri() . '/js/topbar.js', array('jquery'), '1.0.0', true, true );
 			wp_enqueue_script ( 'js-carousel', get_stylesheet_directory_uri() . '/js/carousel.js', array('jquery'), '1.0.0', true, true );
 			wp_enqueue_script ( 'js-variation', get_stylesheet_directory_uri() . '/js/get-actual-variation.js', array('jquery'), '1.0.0', true, true );
+			wp_enqueue_script ( 'js-infogroup', get_stylesheet_directory_uri() . '/js/info-groups.js', array('jquery'), '1.0.0', true, true );
 			wp_enqueue_style ( 'css-main', get_stylesheet_uri(), '', filemtime ( get_template_directory() . '/style.css' ) );
 
 		}

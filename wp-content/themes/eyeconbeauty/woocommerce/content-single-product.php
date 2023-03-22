@@ -68,7 +68,16 @@ if ( post_password_required() ) {
 
 	<?php
 		woocommerce_show_product_images();
+	?>
+		<div class="product-detail">
+	<?php
+		woocommerce_template_single_excerpt(); //Short description
+		woocommerce_output_product_data_tabs();
+	?>
+		</div>
+	<?php
 		woocommerce_template_single_add_to_cart();
+		woocommerce_upsell_display();
 	?>
 	<?php
 	/**
@@ -78,7 +87,7 @@ if ( post_password_required() ) {
 	 * @hooked woocommerce_upsell_display - 15
 	 * @hooked woocommerce_output_related_products - 20
 	 */
-	do_action( 'woocommerce_after_single_product_summary' );
+	//do_action( 'woocommerce_after_single_product_summary' );
 	?>
 </div>
 
