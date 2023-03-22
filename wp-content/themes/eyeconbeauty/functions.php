@@ -220,4 +220,22 @@
 		return strip_tags( $html, '<div><img>' );
 	}
 
+	//REMOVE THE SPAN WRAPPER OF CONTACTFORM7 INPUTS
+
+	add_filter('wpcf7_form_elements', function($content) {
+    $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+			return $content;
+	});
+
+		
+	//Do not copy the opening PHP tag.
+
+/*
+*@link: http://extracatchy.net/remove-p-and-br-tags-cf7/
+*@remove default <p> and <br> tags from CF7
+*/
+
+define('WPCF7_AUTOP', false );
+
 ?>

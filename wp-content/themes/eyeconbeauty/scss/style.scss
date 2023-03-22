@@ -8,6 +8,7 @@
 @import './site/typography';
 @import './site/lists';
 @import './site/buttons';
+@import './site/form';
 
 @import './site/topbar';
 @import './site/footer';
@@ -25,6 +26,9 @@
 
 @import './about/community-slider';
 @import './about/groups';
+
+@import './contact/page';
+@import './contact/contact-form';
 
 @import './promo/hero-banner';
 

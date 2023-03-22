@@ -1,0 +1,45 @@
+.field {
+  width: 100%;
+
+  p {
+    @include d-flex(column, 0.5rem);
+
+    br {
+      display: none;
+    }
+  }
+
+  input, textarea {
+    width: 100%;
+    margin: 0;
+    background: $grey6;
+    border: none;
+    border-bottom: 1px solid $text-color;
+    font-size: 1rem;
+    font-family: $font-family;
+    padding: 1rem 2rem;
+    color: $text-color;
+    font-size: 1rem;
+    z-index: 0;
+
+    &:focus {
+      border-bottom-color: $magenta-color;
+      outline: none;
+    }
+  }
+
+  label {
+    padding-left: 0.333333rem;
+  }
+
+  &.field-area {
+    textarea {
+      resize: vertical;
+    }
+    
+  }
+}
+
+.field-group {
+  @include d-flex(row, 2rem);
+}
