@@ -5,6 +5,10 @@
   position: sticky;
   bottom: 0;
 
+  .quantity {
+    display: none;
+  }
+
   .wrapper__dropdown {
     background-color: lighten($grey-color, 40);
     @include d-flex(column, 2px);

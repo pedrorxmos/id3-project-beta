@@ -29,7 +29,7 @@ if ( $product->is_in_stock() ) : ?>
 
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
+	<form class="product-wrapper cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 		<?php
@@ -46,10 +46,23 @@ if ( $product->is_in_stock() ) : ?>
 		do_action( 'woocommerce_after_add_to_cart_quantity' );
 		?>
 
-		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="btn btn-main btn-product single_add_to_cart_button button alt<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>">
+			<?php echo esc_html( $product->single_add_to_cart_text() ); ?>
+			<div class="product-info__price">
+				<?php echo wc_price($product->get_price()); ?>
+
+				<?php if($product->is_on_sale()) : ?>
+					<span class="price__discount">
+						<?php echo wc_price($product->get_regular_price() ); ?>
+					</span>
+				<?php endif; ?>
+			</div>
+		</button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>
+
+	
 
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
