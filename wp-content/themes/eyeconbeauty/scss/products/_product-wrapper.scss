@@ -1,9 +1,10 @@
 .product-wrapper {
   background-color: $bg-color;
-  padding: 2rem 27px;
+  padding: 2rem 27px 2.666667rem;
   @include d-flex(column, 0.5rem);
   position: sticky;
   bottom: 0;
+  transition: gap 0.3s;
 
   .quantity {
     display: none;
@@ -71,8 +72,35 @@
             .wpcvs-term {
               display: block;
               float: unset;
+              padding: 1px;
+
+              span {
+                width: 100%;
+                height: 100%;
+              }
+
+              &:after, &:before {
+                display: none;
+              }
             }
           }
+        }
+      }
+    }
+  }
+
+  &.open {
+    gap: 1rem;
+    .product-wrapper__dropdown {
+  
+      .toggle-icon {
+  
+        &.down {
+          display: none;
+        }
+  
+        &.up {
+          display: block;
         }
       }
     }
