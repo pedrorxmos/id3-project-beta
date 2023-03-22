@@ -23,12 +23,13 @@ if ( $upsells ) : ?>
 
 <div class="product-slider">
 		<?php
-		$heading = apply_filters( 'woocommerce_product_upsells_products_heading', __( 'You may also like&hellip;', 'woocommerce' ) );
+		$heading = apply_filters( 'woocommerce_product_upsells_products_heading', __( 'Related Products', 'woocommerce' ) );
 
 		if ( $heading ) :
 			?>
 			<div class="product-slider-title">
 				<h2><?php echo esc_html( $heading ); ?></h2>
+				<h3>You might be interested in these products</h3>
 			</div>
 		<?php endif; ?>
 
