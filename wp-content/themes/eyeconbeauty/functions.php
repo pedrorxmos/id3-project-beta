@@ -98,6 +98,33 @@
 			)
 		));
 
+		register_post_type ( 'community', array
+		(
+			'public' => true,
+			'exclude_from_search' => false,
+			'hierarchical' => false,
+			'supports' => array
+			(
+				'title',
+				'custom-fields'
+			),
+			'show_in_rest' => true, // Habilita Gutenberg
+			'labels' => array
+			(
+				'name' => __( 'Community', 'eyecon' ), // Si queremos internacionalizar estas cadenas...
+				'singular_name' => 'Community Post',
+				'add_new' => 'Añadir nuevo community post',
+				'add_new_item' => 'Añadir nuevo community post',
+				'all_items' => 'Todas los community posts',
+				'edit_item' => 'Editar community post',
+				'new_item' => 'Nueva community post',
+				'view_item' => 'Ver community post',
+				'search_items' => 'Buscar community post',
+				'not_found' =>  'No se han encontrado community posts',
+				'not_found_in_trash' => 'No se han encontrado community posts en la papelera'
+			)
+		));
+
 		// register_taxonomy ( 'place', 'fotofolio', array
 		// (
 		// 	'show_admin_column' => true,

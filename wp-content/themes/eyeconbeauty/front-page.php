@@ -15,7 +15,7 @@
       <h2>New releases</h2>
       <h3>Check out our new products</h3>
     </div>
-    <div class="product-slider__wrapper">
+    <div class="product-slider__wrapper left-carousel">
       <?php
         $params = array(
           'posts_per_page' => 8,
@@ -92,7 +92,7 @@
       <h2>Best Sellers</h2>
       <h3>check what's trending right now!</h3>
     </div>
-    <div class="product-slider__wrapper">
+    <div class="product-slider__wrapper left-carousel">
       <?php
         $params = array(
           'posts_per_page' => 8,

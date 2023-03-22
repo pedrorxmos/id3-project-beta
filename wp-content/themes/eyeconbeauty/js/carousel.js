@@ -9,7 +9,7 @@ for ( var i=0, len = galleryElems.length; i < len; i++ ) {
   });
 };
 
-var productElems = document.querySelectorAll('.product-slider__wrapper');
+var productElems = document.querySelectorAll('.left-carousel');
 
 for ( var i=0, len = productElems.length; i < len; i++ ) {
   var productElem = productElems[i];
