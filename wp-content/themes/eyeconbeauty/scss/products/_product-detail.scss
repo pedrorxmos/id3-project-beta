@@ -5,7 +5,7 @@
   .info-group {
     border-top: 1px solid $text-color;
     @include d-flex(column, 0rem);
-    transition: gap .3s;
+    transition: gap .5s;
 
     .info-group__toggle {
       background: none;
@@ -36,10 +36,10 @@
     }
 
     .info-group__content {
-      overflow-y: hidden;
-      max-height: 0px;
-      height: 100%;
+      overflow: hidden;
+      max-height: 0;
       padding: 0 1rem;
+      transition: max-height .3s
     }
 
     &.open {
@@ -57,10 +57,6 @@
           }
         }
         
-      }
-
-      .info-group__content {
-        max-height: 2000px;
       }
     }
   }
