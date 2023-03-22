@@ -1,7 +1,7 @@
 .product-wrapper {
   background-color: $bg-color;
   padding: 2rem 27px;
-  @include d-flex(column, 1rem);
+  @include d-flex(column, 0.5rem);
   position: sticky;
   bottom: 0;
 
@@ -9,72 +9,71 @@
     display: none;
   }
 
-  .wrapper__dropdown {
-    background-color: lighten($grey-color, 40);
-    @include d-flex(column, 2px);
+  .product-wrapper__dropdown {
+    margin: 0;
+    background: $grey6;
+    border: none;
+    border-bottom: 1px solid $text-color;
+    @include d-flex(row, 0);
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 1rem 2rem;
+    color: inherit;
+    font-size: 1rem;
 
-    .dropdown__button {
-      margin: 0;
-      background: none;
-      border: none;
-      border-bottom: 1px solid $text-color;
-      @include d-flex(row, 0);
-      justify-content: space-between;
-      align-items: stretch;
-      padding: 1rem 2rem;
-      color: inherit;
-      font-size: 1rem;
+    .dropdown__title {
+      @include d-flex(row, 8px);
 
-      .button__name-color {
-        @include d-flex(row, 8px);
-        align-items: center;
+      img {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
 
-        .name-color__color {
-          width: 15px;
-          height: 15px;
-          background-color: orange;
-        }
+    .toggle-icon {
+      width: 20px;
+      height: 20px;
+      stroke: $text-color;
+
+      &.down {
+        display: block;
       }
 
-      .toggle-icon {
-        width: 20px;
-        height: 20px;
-        stroke: $text-color;
+      &.up {
+        display: none;
+      }
+    }
+  }
 
-        &.down {
+  .product-wrapper__table {
+    display:block;
+    //height: 100%;
+    max-height: 0;
+    overflow: hidden;
+    border: none;
+    border-collapse:collapse;
+    transition: max-height 0.2s ease-out;
+
+    tbody {
+      display:block;
+
+      tr {
+        display: block;
+
+        .value {
           display: block;
+
+          .wpcvs-terms {
+            @include d-flex(row, 0px);
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .wpcvs-term {
+              display: block;
+              float: unset;
+            }
+          }
         }
-
-        &.up {
-          display: none;
-        }
-      }
-    }
-
-    .dropdown__shades {
-      @include d-flex(row, 4px);
-      display: flex;
-      height: 100%;
-      max-height: 0;
-      overflow-y: hidden;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      padding: 0;
-      
-      transition: max-height .3s, padding .3s;
-
-      .shades__shade {
-        background-color: $yellow-color;
-        width: 54px;
-        height: 54px;
-        border: none;
-      }
-    }
-
-    &.open {
-      .dropdown__shades {
-        padding: 8px;
-        max-height: 150px;
       }
     }
   }
