@@ -1,0 +1,24 @@
+.side-padding {
+	padding-left: 27px;
+	padding-right: 27px;
+}
+
+.just-text-container {
+	@include d-flex(column, 1rem);
+}
+
+.info-page {
+	h3 {
+		font-weight: 600 ;
+	}
+
+	ol {
+		list-style: decimal;
+    padding-left: 1.4rem;
+    li {
+      list-style: decimal;
+      font-weight: 700;
+      font-size: 1.133333rem
+    }
+	}
+}
