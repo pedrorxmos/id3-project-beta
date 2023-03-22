@@ -21,17 +21,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $upsells ) : ?>
 
-	<section class="up-sells upsells products">
-		single-product/up-shells.php
+<div class="product-slider">
 		<?php
 		$heading = apply_filters( 'woocommerce_product_upsells_products_heading', __( 'You may also like&hellip;', 'woocommerce' ) );
 
 		if ( $heading ) :
 			?>
-			<h2><?php echo esc_html( $heading ); ?></h2>
+			<div class="product-slider-title">
+				<h2><?php echo esc_html( $heading ); ?></h2>
+			</div>
 		<?php endif; ?>
 
-		<?php woocommerce_product_loop_start(); ?>
+		<div class="product-slider__wrapper left-carousel">
+		<?php //woocommerce_product_loop_start(); ?>
 
 			<?php foreach ( $upsells as $upsell ) : ?>
 
@@ -45,9 +47,9 @@ if ( $upsells ) : ?>
 
 			<?php endforeach; ?>
 
-		<?php woocommerce_product_loop_end(); ?>
-
-	</section>
+		<?php //woocommerce_product_loop_end(); ?>
+		</div>
+	</div>
 
 	<?php
 endif;
