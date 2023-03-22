@@ -1,3 +1,19 @@
 .contact-page {
   padding: 0 27px;
+  @include d-flex(column, 2.333333rem);
+
+  .contact-page__section {
+    @include d-flex(column, 2rem);
+
+    .section__contacts {
+      .contact--line {
+        @include d-flex(row, 0.5rem);
+        align-items: center;
+        svg {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+    }
+  }
 }
