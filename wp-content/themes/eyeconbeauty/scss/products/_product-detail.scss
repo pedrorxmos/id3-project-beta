@@ -58,6 +58,11 @@
         }
         
       }
+
+      .info-group__content {
+        max-height: unset;
+        transition: max-height .3s
+      }
     }
   }
 }

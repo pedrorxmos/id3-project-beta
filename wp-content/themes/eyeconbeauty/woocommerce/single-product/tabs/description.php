@@ -23,7 +23,7 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
 
 ?>
 
-<div class="info-group">
+<div class="info-group open">
 	<button class="info-group__toggle">
 	<?php if ( $heading ) : ?>
 	<?php echo esc_html( $heading ); ?>

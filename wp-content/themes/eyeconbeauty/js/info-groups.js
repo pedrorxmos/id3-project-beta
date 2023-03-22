@@ -1,13 +1,15 @@
-const infoGroups = document.querySelectorAll('.info-group__toggle');
+const infoDrop = document.querySelectorAll('.info-group__toggle');
 
-infoGroups.forEach(gr => {
+infoDrop.forEach(gr => {
   gr.addEventListener('click', (event) => {
-    event.target.parentElement.classList.toggle('open');
+    const infoGroup = event.target.parentElement;
     const infoContent = event.target.nextElementSibling;
-    if (infoContent.style.maxHeight) {
+    if (infoGroup.classList.contains('open')) {
       infoContent.style.maxHeight = null;
     } else {
       infoContent.style.maxHeight = infoContent.scrollHeight + "px";
     }
+
+    infoGroup.classList.toggle('open');
   })
 })
