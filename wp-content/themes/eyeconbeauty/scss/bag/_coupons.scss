@@ -1,0 +1,22 @@
+.coupon {
+  padding: 1.333333rem 27px 0.833333rem;
+  padding-right: 0;
+  
+  .field-group {
+    align-items: flex-end;
+
+    .field {
+      flex: 3;
+    }
+    .btn {
+      flex: 1;
+      padding: 1rem 2rem;
+      font-weight: 400;
+      width: 100%;
+      text-align: center;
+    }
+    
+  }
+
+  
+}
