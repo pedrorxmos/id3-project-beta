@@ -45,7 +45,9 @@
 	update_option ( 'medium_large_size_w', '0' ); // Esta y la siguiente línea sirven para eliminar el tamaño 'medium_large'
 	update_option ( 'medium_large_size_h', '0' );
 
-
+	if ( function_exists( 'add_image_size' ) ) {
+		add_image_size( 'cart-thumnail', 200, 200 ); // 100 wide and 100 high
+	}
 
 	//  AÑADIR SOPORTE PARA...
 
@@ -228,14 +230,54 @@
 			return $content;
 	});
 
-		
-	//Do not copy the opening PHP tag.
+	//REMOVE UPDATE BUTTON CART & AUTOUPDATE	
+	add_action( 'wp_head', 'cxc_cart_refresh_update_hide_button' );
+	function cxc_cart_refresh_update_hide_button() { 
+		?>
+		<style>
+			.woocommerce button[name="update_cart"],
+			.woocommerce input[name="update_cart"] { display: none; }
+		</style>
+		<?php
+	}
 
-/*
-*@link: http://extracatchy.net/remove-p-and-br-tags-cf7/
-*@remove default <p> and <br> tags from CF7
-*/
+	add_action( 'wp_footer', 'cxc_cart_refresh_update_qty' ); 
+	function cxc_cart_refresh_update_qty() { 
+		if ( is_cart() || ( is_cart() && is_checkout() ) ) {
+			?>
+			<script>
+				jQuery( function( $ ) {
+					let timeout;
+					jQuery('.woocommerce').on('click', '.qty-btn', function(){
+							let inpt = $(this).parent().find('.quantity input');
+							//console.log($(this).attr('class').indexOf("qty-add") >= 0);
+							if($(this).attr('class').indexOf("qty-add") >= 0) {
+								inpt.val(+inpt.val() + 1);
+								//console.log('add');
+								inpt.trigger('change');
+							}
+							else {
+								//if(inpt.val() > 1) {
+									inpt.val(+inpt.val() - 1);
+									inpt.trigger('change');
+								//}
+								//console.log('remove');
+							}
+							//jQuery("input.qty").trigger("change"); // trigger cart update
+					});
 
-define('WPCF7_AUTOP', false );
+					jQuery('.woocommerce').on('change', 'input.qty', function(){
+						if ( timeout !== undefined ) {
+							clearTimeout( timeout );
+						}
+						timeout = setTimeout(function() {
+							jQuery("[name='update_cart']").trigger("click"); // trigger cart update
+						}, 0 ); // 1 second delay, half a second (500) seems comfortable too
+					});
+				} );
+			</script>
+			<?php
+		}
+	}
 
 ?>

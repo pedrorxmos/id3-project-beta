@@ -36,7 +36,7 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 	<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
 	<input
 		type="<?php echo esc_attr( $type ); ?>"
-		<?php echo $readonly ? 'readonly="readonly"' : ''; ?>
+		<?php echo $readonly ? 'readonly="readonly"' : 'readonly="readonly'; ?>
 		id="<?php echo esc_attr( $input_id ); ?>"
 		class="<?php echo esc_attr( join( ' ', (array) $classes ) ); ?>"
 		name="<?php echo esc_attr( $input_name ); ?>"
@@ -51,7 +51,7 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 			inputmode="<?php echo esc_attr( $inputmode ); ?>"
 			autocomplete="<?php echo esc_attr( isset( $autocomplete ) ? $autocomplete : 'on' ); ?>"
 		<?php endif; ?>
-	/>
+		/>
 	<?php
 	/**
 	 * Hook to output something after quantity input field
