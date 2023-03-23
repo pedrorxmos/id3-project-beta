@@ -14,7 +14,7 @@
       @include d-flex(row, 0);
       justify-content: space-between;
       .product-info {
-        @include d-flex(row, 4px);
+        @include d-flex(row, 0.5rem);
         
         .product-remove {
           @include d-flex();
@@ -96,6 +96,10 @@
           }
   
           .quantity {
+            label {
+              display: none;
+            }
+
             input {
               background: none;
               border: none;
