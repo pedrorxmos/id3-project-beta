@@ -40,6 +40,16 @@
   }
 }
 
+.field-submit {
+  input {
+    width: 100%;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
 .field-group {
   @include d-flex(row, 2rem);
 }
