@@ -1,0 +1,67 @@
+.account__navigation {
+
+  position: relative;
+
+  .account__dropdown {
+    margin: 0;
+    background: $grey6;
+    border: none;
+    border-bottom: 1px solid $text-color;
+    @include d-flex(row, 0);
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 1rem 2rem;
+    color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+  
+    .toggle-icon {
+      width: 20px;
+      height: 20px;
+      stroke: $text-color;
+  
+      &.down {
+        display: block;
+      }
+  
+      &.up {
+        display: none;
+      }
+    }
+
+    &.open {
+      .toggle-icon {
+    
+        &.down {
+          display: none;
+        }
+    
+        &.up {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .account__items {
+    position: absolute;
+    z-index: 1;
+    background-color: $bg-color;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    margin: 0;
+    @include d-flex(column, 0);
+    transition: max-height .2s;
+
+    .account__item {
+      display: flex;
+      a {
+        width: 100%;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid $grey4;
+      }
+      
+    }
+  }
+}

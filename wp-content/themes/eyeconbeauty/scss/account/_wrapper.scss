@@ -1,0 +1,4 @@
+.account-wrapper {
+  @include d-flex(column, 2rem);
+  padding: 0 27px;
+}

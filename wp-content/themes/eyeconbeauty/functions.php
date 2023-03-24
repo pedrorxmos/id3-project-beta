@@ -29,6 +29,7 @@
 			wp_enqueue_script ( 'js-variation', get_stylesheet_directory_uri() . '/js/get-actual-variation.js', array('jquery'), '1.0.0', true, true );
 			wp_enqueue_script ( 'js-infogroup', get_stylesheet_directory_uri() . '/js/info-groups.js', array('jquery'), '1.0.0', true, true );
 			wp_enqueue_script ( 'js-cartvardd', get_stylesheet_directory_uri() . '/js/cart-variation-dd.js', array('jquery'), '1.0.0', true, true );
+			wp_enqueue_script ( 'js-accountmenu', get_stylesheet_directory_uri() . '/js/account-menu.js', array('jquery'), '1.0.0', true, true );
 
 			wp_enqueue_style ( 'css-main', get_stylesheet_uri(), '', filemtime ( get_template_directory() . '/style.css' ) );
 
@@ -334,6 +335,24 @@
 			wp_safe_redirect( wc_get_account_endpoint_url( 'edit-account' ) );
 			exit;
 		}
+	}
+
+	//REORDER ACCOUT MENU
+	add_filter( 'woocommerce_account_menu_items', 'remove_my_account_menu' );
+	function remove_my_account_menu( $menu_links ){
+		
+		$menu_links = array(
+			'edit-account'    => __( 'Account Details', 'woocommerce' ),
+			'edit-address'    => _n( 'Address Book', 'Address', (int) wc_shipping_enabled(), 'woocommerce' ),
+      'orders'          => __( 'My Orders', 'woocommerce' ),
+      'payment-methods' => __( 'Payment Methods', 'woocommerce' ),
+      
+      'customer-logout' => __( 'Logout', 'woocommerce' ),
+		);
+		//unset( $menu_links[ 'orders' ] );
+
+		return $menu_links;
+		
 	}
 
 	/**
