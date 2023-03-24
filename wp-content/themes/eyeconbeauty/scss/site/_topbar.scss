@@ -133,8 +133,6 @@
     }
   }
 
-  
-
   .nav-actions {
     display: flex;
     flex-direction: row;
@@ -176,6 +174,27 @@
 
       .close-menu-icon {
         display: none;
+      }
+
+      &.nav-bag {
+        position: relative;
+
+        .nav-bag__number {
+          @include d-flex();
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          z-index: 3;
+          font-size: 0.833333rem;
+          font-weight: 600;
+          color: $bg-color;
+          border-radius: 50%;
+          height: 1.333333rem;
+          width: 1.333333rem;
+          left: 70%;
+          bottom: 70%;
+          background-color: $magenta-color;
+        }
       }
     }
 
