@@ -1,0 +1,14 @@
+.empty_cart_wrapper {
+  @include d-flex(column, 1rem);
+  padding-bottom: 4rem;
+
+  .cart-empty {
+    padding: 0 27px;
+    align-self: center;
+  }
+
+  .return-to-shop {
+    width: fit-content;
+    align-self: center;
+  }
+}
