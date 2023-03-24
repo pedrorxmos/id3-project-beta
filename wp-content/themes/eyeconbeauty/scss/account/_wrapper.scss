@@ -5,6 +5,10 @@
     padding: 0 27px;
   }
   .account__content {
+
+    .woocommerce-notices-wrapper {
+      padding: 0;
+    }
     @include d-flex(column, 1.666667rem);
     background-color: lighten($grey6, 4);
     border-radius: 1.666667rem;
