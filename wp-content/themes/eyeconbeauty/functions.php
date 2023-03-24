@@ -318,31 +318,84 @@
 		<?php
 	}
 
-	//ADD CUSTOM FIELDS TO REGISTER FORM 
 
-	function wooc_extra_register_fields() {?>
-		<div class="field form-row form-row-first">
-			<label for="reg_billing_first_name"><?php _e( 'First Name', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+	add_filter( 'woocommerce_account_menu_items', 'misha_remove_my_account_dashboard' );
+	function misha_remove_my_account_dashboard( $menu_links ){
+		
+		unset( $menu_links[ 'dashboard' ] );
+		return $menu_links;
+		
+	}
+	// perform a redirect
+	add_action( 'template_redirect', 'misha_redirect_to_orders_from_dashboard' );
+	function misha_redirect_to_orders_from_dashboard(){
+		
+		if( is_account_page() && empty( WC()->query->get_current_endpoint() ) ){
+			wp_safe_redirect( wc_get_account_endpoint_url( 'edit-account' ) );
+			exit;
+		}
+	}
+
+	/**
+ * @snippet       Add First & Last Name to My Account Register Form - WooCommerce
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli
+ * @compatible    WC 3.9
+ * @donate $9     https://businessbloomer.com/bloomer-armada/
+ */
+  
+///////////////////////////////
+// 1. ADD FIELDS
+  
+add_action( 'woocommerce_register_form_start', 'bbloomer_add_name_woo_account_registration' );
+  
+function bbloomer_add_name_woo_account_registration() {
+    ?>
+  
+    <div class="field form-row form-row-first">
+			<label for="reg_billing_first_name"><?php _e( 'First name', 'woocommerce' ); ?> <span class="required">*</span></label>
 			<input type="text" class="input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) esc_attr_e( $_POST['billing_first_name'] ); ?>" />
 		</div>
-		<div class="field form-row form-row-last">
-			<label for="reg_billing_last_name"><?php _e( 'Last Name', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-			<input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>" />
+  
+    <div class="field form-row form-row-last">
+    <label for="reg_billing_last_name"><?php _e( 'Last name', 'woocommerce' ); ?> <span class="required">*</span></label>
+    <input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>" />
 		</div>
-		<?php
-	}
-	add_action( 'woocommerce_register_form_start', 'wooc_extra_register_fields' );
-
-	// VALIDATE CUSTOM FORM FIELDS WOOCOMMERCE
-
-	function wooc_validate_extra_register_fields( $username, $email, $validation_errors ) {
-		if ( isset( $_POST['billing_first_name'] ) && empty( $_POST['billing_first_name'] ) ) {
-					$validation_errors->add( 'billing_first_name_error', __( '<strong>Error</strong>: First name is required!', 'woocommerce' ) );
-		}
-		if ( isset( $_POST['billing_last_name'] ) && empty( $_POST['billing_last_name'] ) ) {
-					$validation_errors->add( 'billing_last_name_error', __( '<strong>Error</strong>: Last name is required!.', 'woocommerce' ) );
-		}
-			return $validation_errors;
-	}
-	add_action( 'woocommerce_register_post', 'wooc_validate_extra_register_fields', 10, 3 );
+  
+    <div class="clear hide"></div>
+  
+    <?php
+}
+  
+///////////////////////////////
+// 2. VALIDATE FIELDS
+  
+add_filter( 'woocommerce_registration_errors', 'bbloomer_validate_name_fields', 10, 3 );
+  
+function bbloomer_validate_name_fields( $errors, $username, $email ) {
+    if ( isset( $_POST['billing_first_name'] ) && empty( $_POST['billing_first_name'] ) ) {
+        $errors->add( 'billing_first_name_error', __( '<strong>Error</strong>: First name is required!', 'woocommerce' ) );
+    }
+    if ( isset( $_POST['billing_last_name'] ) && empty( $_POST['billing_last_name'] ) ) {
+        $errors->add( 'billing_last_name_error', __( '<strong>Error</strong>: Last name is required!.', 'woocommerce' ) );
+    }
+    return $errors;
+}
+  
+///////////////////////////////
+// 3. SAVE FIELDS
+  
+add_action( 'woocommerce_created_customer', 'bbloomer_save_name_fields' );
+  
+function bbloomer_save_name_fields( $customer_id ) {
+    if ( isset( $_POST['billing_first_name'] ) ) {
+        update_user_meta( $customer_id, 'billing_first_name', sanitize_text_field( $_POST['billing_first_name'] ) );
+        update_user_meta( $customer_id, 'first_name', sanitize_text_field($_POST['billing_first_name']) );
+    }
+    if ( isset( $_POST['billing_last_name'] ) ) {
+        update_user_meta( $customer_id, 'billing_last_name', sanitize_text_field( $_POST['billing_last_name'] ) );
+        update_user_meta( $customer_id, 'last_name', sanitize_text_field($_POST['billing_last_name']) );
+    }
+  
+}
 ?>
