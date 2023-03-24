@@ -1,5 +1,6 @@
 .field {
   width: 100%;
+  @include d-flex(column, 0.5rem);
 
   p {
     @include d-flex(column, 0.5rem);
