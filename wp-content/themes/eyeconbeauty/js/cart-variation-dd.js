@@ -4,13 +4,16 @@ const currentValue = document.querySelector('.wpcvs-selected');
 
 // ddTitleName.textContent = currentValue.getAttribute('data-term');
 //
-dd.addEventListener('click', () => {
-  dd.parentElement.classList.toggle('open');
-  //cartTable.style.backgroundColor = 'red';
-  if (cartTable.style.maxHeight) {
-    cartTable.style.maxHeight = null;
-} else {
-    cartTable.style.maxHeight = cartTable.scrollHeight + "px";
+if(dd !== null) {
+  dd.addEventListener('click', () => {
+    dd.parentElement.classList.toggle('open');
+    //cartTable.style.backgroundColor = 'red';
+    if (cartTable.style.maxHeight) {
+      cartTable.style.maxHeight = null;
+  } else {
+      cartTable.style.maxHeight = cartTable.scrollHeight + "px";
+  }
+  });
 }
-});
+
 
