@@ -1,4 +1,6 @@
 .woocommerce-cart-form {
+  @include d-flex(column, 2rem);
+
   table, thead, tbody, tr, td {
     display: block;
   }

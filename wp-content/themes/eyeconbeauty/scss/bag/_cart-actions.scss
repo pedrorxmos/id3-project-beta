@@ -1,0 +1,8 @@
+.cart-actions {
+  @include d-flex(column, 2rem);
+  padding: 0 2rem;
+}
+
+.cart-collaterals {
+  padding: 2rem 0 0;
+}
