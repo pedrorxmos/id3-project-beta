@@ -2,6 +2,10 @@
   padding: 0 27px 1rem;
   @include d-flex(column, 0.5rem);
 
+  &:empty {
+    display: none;
+  }
+
   .woocommerce-message {
     border-left: 3px solid $yellow-color;
     background-color: lighten($yellow-color, 35);
