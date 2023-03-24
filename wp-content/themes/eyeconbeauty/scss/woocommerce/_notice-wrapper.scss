@@ -1,0 +1,22 @@
+.woocommerce-notices-wrapper {
+  padding: 0 27px 1rem;
+  @include d-flex(column, 0.5rem);
+
+  .woocommerce-message {
+    border-left: 3px solid $yellow-color;
+    background-color: lighten($yellow-color, 35);
+    padding: 0.5rem 1rem;
+    color: $text-color;
+    font-weight: 500;
+
+    &.woocommerce-error {
+      border-color: $red-color;
+      background-color: lighten($red-color, 30);
+    }
+
+    &.woocommerce-info {
+      border-color: $cyan-color;
+      background-color: lighten($cyan-color, 35);
+    }
+  }
+}
