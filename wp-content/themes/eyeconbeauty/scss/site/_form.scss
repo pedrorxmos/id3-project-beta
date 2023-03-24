@@ -10,7 +10,10 @@
     }
   }
 
-  input, textarea {
+  input, textarea, select {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
     width: 100%;
     margin: 0;
     background: $grey6;
@@ -39,6 +42,7 @@
     }
     
   }
+
 }
 
 .field-submit {

@@ -5,10 +5,6 @@
     padding: 0 27px;
   }
   .account__content {
-
-    .woocommerce-notices-wrapper {
-      padding: 0;
-    }
     @include d-flex(column, 1.666667rem);
     background-color: lighten($grey6, 4);
     border-radius: 1.666667rem;
@@ -16,7 +12,12 @@
     padding: 2rem;
     margin: 0 1rem;
 
-    form {
+    .woocommerce-notices-wrapper {
+      padding: 0;
+    }
+    
+
+    form, .address-edit-fields {
       @include d-flex(column, 1.666667rem);
 
       fieldset {
