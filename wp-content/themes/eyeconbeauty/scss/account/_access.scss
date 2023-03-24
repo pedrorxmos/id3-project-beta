@@ -1,0 +1,21 @@
+.account-access {
+  @include d-flex(column, 4rem);
+  padding: 0 27px 2rem;
+
+  .access__group {
+    @include d-flex(column, 1rem);
+
+    h3{
+      font-weight: 600;
+    }
+
+    .access__form {
+      @include d-flex(column, 2rem);
+
+      .field-group {
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+  }
+}

@@ -53,3 +53,58 @@
 .field-group {
   @include d-flex(row, 2rem);
 }
+
+.field-checkbox {
+
+  .wpcf7-list-item {
+    margin: 0;
+  }
+
+  label {
+    @include d-flex(row, 1rem);
+    align-items: center;
+
+    input {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      position: relative;
+      width: 1.833333rem;
+      height: 1.833333rem;
+      margin: 0;
+      border-radius: 0.5rem;
+      border: 1px solid $grey4;
+      background-color: $bg-color;
+      cursor: pointer;
+
+      &:checked {
+        border: 1px solid $cyan-color;
+        background-color: $cyan-color;
+
+        &:after {
+          content: '\2713';
+          font-size: 1.166667rem;
+          font-family: $font-family;
+          font-weight: 600;
+          color: $text-color;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-weight: bold;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  span {
+    flex: 1;
+  }
+}
+
+.field-link {
+  a{
+    border-bottom: 1px solid $text-color;
+  }
+}
