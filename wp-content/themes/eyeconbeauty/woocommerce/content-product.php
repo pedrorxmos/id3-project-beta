@@ -25,9 +25,9 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-		<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
+		
 				<div <?php wc_product_class( 'product-card ', $product ); ?>>
-
+				<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 				<a href="<?php the_permalink() ?>">
             <?php the_post_thumbnail() ?>
           </a>

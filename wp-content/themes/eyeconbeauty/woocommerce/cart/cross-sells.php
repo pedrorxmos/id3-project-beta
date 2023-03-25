@@ -33,7 +33,9 @@ if ( $cross_sells ) : ?>
 		<div class="product-slider__wrapper left-carousel">
 		
 
-		<?php foreach ( $cross_sells as $cross_sell ) : ?>
+		<?php 
+		$cross_sells = array_slice($cross_sells, 0, 8, true);
+		foreach ( $cross_sells as $cross_sell ) : ?>
 
 			<?php
 				$post_object = get_post( $cross_sell->get_id() );
