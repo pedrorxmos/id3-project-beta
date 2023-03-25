@@ -10,7 +10,7 @@
     }
 
     .access__form {
-      @include d-flex(column, 2rem);
+      @include d-flex(column, 1.666667rem);
 
       .field-group {
         justify-content: space-between;

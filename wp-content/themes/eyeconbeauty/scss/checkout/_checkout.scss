@@ -1,0 +1,12 @@
+.checkout {
+  padding: 0 27px;
+  @include d-flex(column, 1.666667rem);
+
+  .checkout-group {
+    @include d-flex(column, 1.666667rem);
+
+    &.additional-fields {
+      padding-top: 1.666667rem;
+    }
+  }
+}
