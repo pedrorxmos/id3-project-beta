@@ -13,4 +13,4 @@
     </div> -->
     <?php the_content() ?>
   </main>
-<?php get_footer(); ?>
+<?php get_footer( 'checkout' ); ?>
