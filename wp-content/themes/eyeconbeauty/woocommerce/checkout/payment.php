@@ -22,7 +22,7 @@ if ( ! wp_doing_ajax() ) {
 }
 ?>
 <div id="payment" class="payment woocommerce-checkout-payment">
-	<h4>Select one of these payment methods</h4>
+	<h3>Select one of these payment methods</h3>
 
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<div class="wc_payment_methods payment_methods methods">

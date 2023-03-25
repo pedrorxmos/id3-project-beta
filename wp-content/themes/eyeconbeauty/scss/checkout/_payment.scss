@@ -1,4 +1,6 @@
 .payment {
+  @include d-flex(column, 1rem);
+  
   .payment_methods {
     @include d-flex(column, 1rem);
 

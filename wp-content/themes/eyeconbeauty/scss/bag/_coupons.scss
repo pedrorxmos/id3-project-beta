@@ -1,5 +1,5 @@
 .coupon {
-  
+  @include d-flex(column, 0.666667rem);
   .field-group {
     align-items: flex-end;
 
