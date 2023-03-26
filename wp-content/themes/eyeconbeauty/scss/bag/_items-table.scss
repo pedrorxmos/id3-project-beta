@@ -50,7 +50,7 @@
             @include d-flex(column, 0);
             text-transform: uppercase;
 
-            a {
+            a, .name__name {
               width: fit-content;
               font-size: 1rem;
               font-weight: 600;
