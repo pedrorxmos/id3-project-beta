@@ -1,4 +1,4 @@
-.woocommerce-cart-form {
+.woocommerce-cart-form, .checkout-cart {
   @include d-flex(column, 2rem);
 
   table, thead, tbody, tr, td {
@@ -10,6 +10,10 @@
     
     tbody {
       @include d-flex(column, 1rem);
+    }
+
+    tfoot {
+      @include d-flex(column, 0.5rem);
     }
 
     .cart_item {
@@ -29,12 +33,10 @@
         }
 
         .product-thumbnail {
-          a {
-            img {
-              width: 60px;
-              height: 75px;
-              object-fit: cover;  
-            }
+          img {
+            width: 60px;
+            height: 75px;
+            object-fit: cover;  
           }
         }
 
@@ -42,10 +44,11 @@
           @include d-flex(column, 0);
           padding: 0.5rem 0;
           justify-content: space-between;
+          
 
           .product-name {
             @include d-flex(column, 0);
-  
+
             a {
               width: fit-content;
               font-size: 1rem;
@@ -70,6 +73,10 @@
         justify-content: space-between;
         align-items: flex-end;
         padding: 0.5rem 0;
+
+        &.act-checkout {
+          justify-content: center;
+        }
 
         .product-quantity {
           @include d-flex(row, 4px);
@@ -121,7 +128,13 @@
           font-weight: 600;
         }
       }
-     
     }
+  }
+}
+
+.checkout-cart {
+  .shop_table {
+    @include d-flex(column, 1.333333rem);
+    padding-right: 0px;
   }
 }
