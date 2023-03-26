@@ -44,7 +44,7 @@ switch ($current) {
 		$current_tab = "Address Book";
 		break;
 	case 'orders' :
-		$current_tab = "My Order";
+		$current_tab = "My Orders";
 		break;
 	case 'payment-methods':
 		$current_tab = "Payment Methods";
@@ -55,8 +55,9 @@ do_action( 'woocommerce_before_account_navigation' );
 ?>
 
 <nav class="account__navigation woocommerce-MyAccount-navigation">
+	<?php if($current) : ?>
 	<span class="account__dropdown">
-		<?php echo  $current_tab; ?>
+		<?php echo  $current_tab;?>
 
 		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="toggle-icon down">
 			<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -74,6 +75,15 @@ do_action( 'woocommerce_before_account_navigation' );
 			</li>
 		<?php endforeach; ?>
 	</ul>
+	<?php else : ?>
+	<a href="<?php echo home_url( '/my-account/orders/' ); ?>" class="return-to-orders"> 
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+		</svg>
+
+		Go back to my orders
+	</a>
+	<?php endif; ?>
 </nav>
 
 <?php do_action( 'woocommerce_after_account_navigation' ); ?>

@@ -347,7 +347,6 @@
 			'edit-account'    => __( 'Account Details', 'woocommerce' ),
 			'edit-address'    => _n( 'Address Book', 'Address', (int) wc_shipping_enabled(), 'woocommerce' ),
       'orders'          => __( 'My Orders', 'woocommerce' ),
-      'payment-methods' => __( 'Payment Methods', 'woocommerce' ),
       
       'customer-logout' => __( 'Logout', 'woocommerce' ),
 		);
