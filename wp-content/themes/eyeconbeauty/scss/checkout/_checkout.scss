@@ -9,4 +9,12 @@
       padding-top: 1.666667rem;
     }
   }
+
+  .field {
+    .woocommerce-input-wrapper {
+      .select2 {
+        display: none;
+      }
+    }
+  }
 }
