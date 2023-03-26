@@ -63,6 +63,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
 						<?php do_action( 'woocommerce_after_shop_loop_item' ); 
 						?>
+
+						<!-- <p class="added_to_cart">Added</p> -->
           </div>
 
 	<!-- <?php
