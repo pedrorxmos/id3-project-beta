@@ -26,6 +26,15 @@ body {
 			padding: 0 0 2.666667rem 0;
 		}
 	}
+
+	&.woocommerce-order-received {
+		.topbar-checkout {
+			.return-bag {
+				display: none;
+				
+			}
+		}
+	}
 }
 
 .container {
