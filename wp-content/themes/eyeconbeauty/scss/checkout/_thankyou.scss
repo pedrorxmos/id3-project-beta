@@ -1,12 +1,27 @@
 .thankyou-section {
   @include d-flex(column, 1.666667rem);
-    background-color: lighten($grey6, 4);
-    border-radius: 1.666667rem;
-    border: 1px solid $grey5;
-    padding: 2rem;
-    margin: 0 1rem;
+  background-color: lighten($grey6, 4);
+  border-radius: 1.666667rem;
+  border: 1px solid $grey5;
+  padding: 2rem;
+  margin: 0 1rem;
+
+  .order_details {
+    @include d-flex(column, 0.5rem);
+  }
 }
 
 .order-wrapper, .thankyou-wrapper {
   @include d-flex(column, 2rem);
+}
+
+.thankyou-text {
+  padding:1rem 27px;
+  text-align: center;
+  @include d-flex(column, 1rem);
+
+  .thankyou__title {
+    font-size: 1.333333rem;
+    font-weight: 600;
+  }
 }
