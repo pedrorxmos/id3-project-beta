@@ -78,14 +78,16 @@ defined( 'ABSPATH' ) || exit;
 							<?php echo wp_kses_post( $order->get_payment_method_title() ); ?>
 						</li>
 					<?php endif; ?>
-
+						<li class="payment-method-info">
+						<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
+						</li>
 				</ul>
 			</section>
 			
 
 		<?php endif; ?>
 
-		<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
+		
 		<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
 
 	<?php else : ?>
@@ -93,5 +95,7 @@ defined( 'ABSPATH' ) || exit;
 		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), null ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 
 	<?php endif; ?>
+
+	<a href="<?php echo home_url( '/shop/' ); ?>" class="btn btn-main">Go to Homepage</a>
 
 </div>
