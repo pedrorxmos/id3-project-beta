@@ -1,0 +1,8 @@
+.thankyou-section {
+  @include d-flex(column, 1.666667rem);
+    background-color: lighten($grey6, 4);
+    border-radius: 1.666667rem;
+    border: 1px solid $grey5;
+    padding: 2rem;
+    margin: 0 1rem;
+}

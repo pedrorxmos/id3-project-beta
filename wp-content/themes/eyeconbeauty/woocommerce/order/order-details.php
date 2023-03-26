@@ -39,19 +39,20 @@ if ( $show_downloads ) {
 	);
 }
 ?>
-<section class="woocommerce-order-details">
+<section class="thankyou-section woocommerce-order-details">
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
 
-	<h2 class="woocommerce-order-details__title"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h2>
+	<h2 class="h3 woocommerce-order-details__title"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h2>
 
+	<div class="checkout-cart">
 	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
 
-		<thead>
+		<!-- <thead>
 			<tr>
 				<th class="woocommerce-table__product-name product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
 				<th class="woocommerce-table__product-table product-total"><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
 			</tr>
-		</thead>
+		</thead> -->
 
 		<tbody>
 			<?php
@@ -81,7 +82,7 @@ if ( $show_downloads ) {
 			<?php
 			foreach ( $order->get_order_item_totals() as $key => $total ) {
 				?>
-					<tr>
+					<tr class="cart_item">
 						<th scope="row"><?php echo esc_html( $total['label'] ); ?></th>
 						<td><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : wp_kses_post( $total['value'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
 					</tr>
@@ -89,13 +90,15 @@ if ( $show_downloads ) {
 			}
 			?>
 			<?php if ( $order->get_customer_note() ) : ?>
-				<tr>
+				<tr class="cart_item">
 					<th><?php esc_html_e( 'Note:', 'woocommerce' ); ?></th>
 					<td><?php echo wp_kses_post( nl2br( wptexturize( $order->get_customer_note() ) ) ); ?></td>
 				</tr>
 			<?php endif; ?>
 		</tfoot>
-	</table>
+		</table>
+	</div>
+	
 
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 </section>
