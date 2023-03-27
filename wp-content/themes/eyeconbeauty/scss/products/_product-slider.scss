@@ -1,7 +1,6 @@
 .product-slider {
   @include d-flex(column, 1rem);
   padding: 1rem 0 2.666667rem;
-  max-width: 1440px;
   @include max-width-center();
 
   .product-slider-title {

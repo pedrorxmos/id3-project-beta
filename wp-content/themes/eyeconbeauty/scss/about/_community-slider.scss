@@ -1,12 +1,37 @@
 .community-slider {
   @include d-flex(column, 1rem);
   padding: 2.666667rem 0;
+  @include max-width-center();
 
   .community-slider-title {
-    padding: 0 27px;
+    padding: 0 $s-pd;
+
+    @include mq(min-width, $m-wd) {
+      padding: 0 $m-pd;
+    }
+
+    @include mq(min-width, $l-wd) {
+      padding: 0 $l-pd;
+    }
+
+    @include mq(min-width, $xl-wd) {
+      padding: 0 $xl-pd;
+    }
   }
 
   .community-slider-wrapper {
+
+    @include mq(min-width, $m-wd) {
+      margin: 0 $m-pd 35px;
+    }
+
+    @include mq(min-width, $l-wd) {
+      margin: 0 $l-pd 35px;
+    }
+
+    @include mq(min-width, $xl-wd) {
+      margin: 0 $xl-pd 35px;
+    }
 
     .flickity-button {
       display: none;
@@ -35,8 +60,46 @@
           bottom: 0.25rem;
           color: $bg-color;
           font-weight: 600;
-          font-size: 1.166667rem;
+          font-size: 1rem;
           text-shadow: 0px 0px 3px $text-color;
+        }
+
+        @include mq(max-width, 380px) {
+          width: 150px;
+          img {
+            width: 150px;
+            height: 150px;
+          }
+          
+          span {
+            font-size: 0.833333rem;
+          }
+        }
+
+        @include mq(min-width, 500px) {
+          width: 200px;
+          img {
+            width: 200px;
+            height: 200px;
+          }
+          
+          span {
+            font-size: 1rem;
+          }
+        }
+
+        @include mq(min-width, 580px) {
+          width: 240px;
+          img {
+            width: 240px;
+            height: 240px;
+          }
+        }
+
+        @include mq(min-width, $m-wd) {
+          span {
+            font-size: 0.833333rem;
+          }
         }
       }
     }
