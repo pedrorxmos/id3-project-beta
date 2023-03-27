@@ -17,7 +17,6 @@ for ( var i=0, len = productElems.length; i < len; i++ ) {
     // options...
     cellAlign: 'left',
     wrapAround: true,
-    prevNextButtons: false,
     contain: true
   });
 };

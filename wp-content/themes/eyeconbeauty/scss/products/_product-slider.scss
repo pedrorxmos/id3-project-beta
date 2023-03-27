@@ -9,6 +9,10 @@
   .product-slider__wrapper {
     margin-bottom: 35px;
 
+    .flickity-button {
+      display: none;
+    }
+
     .product-card {
       width: 178px;
       padding: 5px;
@@ -16,6 +20,26 @@
       @include mq(max-width, 380px) {
         width: 150px;
         font-size: 11px;
+      }
+
+      @include mq(min-width, 500px) {
+        width: 200px;
+      }
+
+      @include mq(min-width, 550px) {
+        width: 230px;
+      }
+
+      @include mq(min-width, 600px) {
+        width: 260px;
+      }
+
+      @include mq(min-width, 700px) {
+        width: 300px;
+      }
+
+      @include mq(min-width, $m-wd) {
+        width: 25%;
       }
     }
   }

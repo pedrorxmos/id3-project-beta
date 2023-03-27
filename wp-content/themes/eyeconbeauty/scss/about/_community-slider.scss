@@ -7,6 +7,10 @@
   }
 
   .community-slider-wrapper {
+
+    .flickity-button {
+      display: none;
+    }
       
     .community-images__pair {
       @include d-flex(column, 0);
