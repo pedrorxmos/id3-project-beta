@@ -3,19 +3,41 @@ footer {
   background-color: $text-color;
   color: $bg-color;
   padding: 27px;
+  padding-bottom: 2rem;
   @include d-flex();
+
+  @include mq(min-width, 800px){
+    padding: 64px;
+    padding-bottom: 2rem;
+  }
+
+  @include mq(min-width, 1200px){
+    padding: 64px 208px 2rem;
+  }
 
   .footer-copyright {
     margin-left: auto;
     margin-right: auto;
     font-size: 0.833333rem;
+
+    @include mq(min-width, 800px){
+      font-size: 0.75rem
+    }
   }
 
   .footer-group {
     @include d-flex();
 
+    @include mq(min-width, 800px){
+      flex-direction: row;
+    }
+
     .footer-info  {
       @include d-flex();
+
+      @include mq(min-width, 800px){
+        flex: 1;
+      }
 
       .footer-newsletter {
         @include d-flex(column, 1rem);
@@ -28,6 +50,10 @@ footer {
           font-size: 1.333333rem;
           font-weight: 700;
           text-transform: uppercase;
+
+          @include mq(min-width, 800px){
+            font-size: 1.25rem;
+          }
         }
 
         .newsletter-input {
@@ -69,6 +95,10 @@ footer {
           font-size: 1.166667rem;
           font-weight: 700;
           text-transform: uppercase;
+          
+          @include mq(min-width, 800px){
+            font-size: 1rem;
+          }
         }
 
         .socialmedia-links {
@@ -76,14 +106,24 @@ footer {
           .menu {
             @include d-flex(row, 2rem);
             
+            @include mq(min-width, 800px){
+              gap: 1.5rem;
+            }
+
             .menu-item {
               a {
                 svg {
                   width: 20px;
                   height: 20px;
+                  
                   fill: $bg-color;
                   path {
                     fill: inherit;
+                  }
+
+                  @include mq(min-width, 800px){
+                    width: 24px;
+                    height: 24px;
                   }
                 }
               }
@@ -98,6 +138,10 @@ footer {
     @include d-flex(row, 24px);
     text-transform: uppercase;
     font-size: 0.833333rem;
+
+    @include mq(min-width, 800px){
+      flex: 1;
+    }
     
     .footer-col {
       @include d-flex(column, 12px);
