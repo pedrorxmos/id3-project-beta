@@ -12,6 +12,11 @@
     .product-card {
       width: 178px;
       padding: 5px;
+
+      @include mq(max-width, 380px) {
+        width: 150px;
+        font-size: 11px;
+      }
     }
   }
 

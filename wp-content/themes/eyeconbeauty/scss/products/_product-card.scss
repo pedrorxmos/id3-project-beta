@@ -21,14 +21,14 @@
       padding-top: 1rem;
 
       .product-info__category {
-        font-size: 0.833333rem;
+        font-size: 0.833333em;
         color: $grey-color;
         font-weight: 400;
         text-transform: uppercase;
       }
 
       .product-info__name {
-        font-size: 1.083333rem;
+        font-size: 1.083333em;
         color: $text-color;
         overflow: hidden;
         height: 3rem;
@@ -38,7 +38,7 @@
 
       .product-info__price {
         
-        font-size: 1.166667rem;
+        font-size: 1.166667em;
         color: $text-color;
         font-weight: 600;
 
@@ -59,8 +59,8 @@
     }
 
     .add_to_cart_button {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
       font-weight: 400;
       width: 100%;
       text-align: center;
