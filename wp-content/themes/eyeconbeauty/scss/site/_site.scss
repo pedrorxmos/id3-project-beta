@@ -50,7 +50,7 @@ body {
 	padding-left: $s-pd;
 	padding-right: $s-pd;
 	padding-bottom: 2rem;
-	@include max-width-center($xl-wd);
+	@include max-width-center();
 
 	@include mq(min-width, $m-wd) {
     padding-left: $m-pd;

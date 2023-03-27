@@ -7,7 +7,12 @@
       <h2><?php the_title(); ?></h2>
     </div>
     <div class="about-content">
-      <?php the_content() ?>
+      <?php while ( have_rows ( 'about_content' ) ) : the_row(); ?>
+        <div class="about-group">
+          <p><?php echo get_sub_field ( 'about_text' ); ?></p>
+            <?php echo wp_get_attachment_image ( get_sub_field ( 'about_img' ), '', '', '' ); ?>
+        </div>
+      <?php endwhile; ?>
     </div>
 
     <?php 

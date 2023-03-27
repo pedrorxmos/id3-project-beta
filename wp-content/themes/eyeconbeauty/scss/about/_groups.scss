@@ -1,20 +1,81 @@
 .about-content {
   @include d-flex(column, 2.333333rem);
   padding-bottom: 2rem;
+
+  @include max-width-center();
+
+	@include mq(min-width, $m-wd) {
+    padding-left: $m-pd;
+		padding-right: $m-pd;
+  }
+
+  @include mq(min-width, $l-wd) {
+    padding-left: $l-pd;
+		padding-right: $l-pd;
+  }
+
+  @include mq(min-width, $xl-wd) {
+    padding-left: $xl-pd;
+		padding-right: $xl-pd;
+  }
 }
 
 .about-group {
   @include d-flex(column, 2.333333rem);
+  width: 100%;
 
-  figure{
-    img {
-      max-width: 100%;
-      height: 85vw;
-      object-fit: cover;
-    }
+  img {
+    width: 100vw;
+    height: 400px;
+    object-fit: cover;
+    display: block;
   }
+  
 
   p {
     padding: 0 27px;
+  }
+
+  @include mq(min-width, $m-wd) {
+    @include d-flex(row, 2.333333rem);
+    align-items: center;
+    justify-items: stretch;
+
+    img {
+      width: 350px;
+      height: 290px;
+      object-fit:cover;
+      display: block;
+    }
+
+    p {
+      flex: 1;
+      padding: 0;
+    }
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @include mq(min-width, 900px) {
+    img {
+      width: 400px;
+      height: 340px;
+    }
+  }
+
+  @include mq(min-width, $l-wd) {
+    img {
+      width: 450px;
+      height: 390px;
+    }
+  }
+
+  @include mq(min-width, $xl-wd) {
+    img {
+      width: 500px;
+      height: 440px;
+    }
   }
 }
