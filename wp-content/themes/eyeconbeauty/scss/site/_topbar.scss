@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 27px;
+  padding: 25px $s-pd;
   position: fixed;
   width: 100%;
   top: 0;
@@ -12,12 +12,16 @@
   text-transform: uppercase;
   z-index: 2;
 
-  @include mq(min-width, 800px){
-    padding: 1.333333rem 64px;
+  @include mq(min-width, $m-wd){
+    padding: 1.333333rem $m-pd;
   }
 
-  @include mq(min-width, 1200px){
-    padding: 1.333333rem 208px;
+  @include mq(min-width, $l-wd){
+    padding: 1.333333rem $l-pd;
+  }
+
+  @include mq(min-width, $xl-wd){
+    padding: 1.333333rem $xl-pd;
   }
 
   .logo {
@@ -32,7 +36,7 @@
 
     @include logo();
 
-    @include mq(min-width, 800px){
+    @include mq(min-width, $m-wd){
       font-size: 0.833333rem;
       flex: 1 1 0;
 
@@ -54,7 +58,7 @@
     justify-content: space-between;
     transition: right ease-in-out .3s;
 
-    @include mq(min-width, 800px){
+    @include mq(min-width, $m-wd){
       position: static;
       flex-direction: row;
       height: 100%;
@@ -72,7 +76,7 @@
       flex-direction: column;
       gap: 2.666667rem;
 
-      @include mq(min-width, 800px){
+      @include mq(min-width, $m-wd){
         flex-direction: row;
         justify-content: center;
       }
@@ -89,7 +93,7 @@
           flex-direction: column;
           gap: 1.333333rem;
 
-          @include mq(min-width, 800px){
+          @include mq(min-width, $m-wd){
             display: none;
           }
           
@@ -100,7 +104,7 @@
           }
         }
 
-        @include mq(min-width, 800px){
+        @include mq(min-width, $m-wd){
           font-weight: 400;
           font-size: 0.75rem;
           position: relative;
@@ -139,7 +143,7 @@
       flex-direction: row;
       justify-content: space-between;
 
-      @include mq(min-width, 800px){
+      @include mq(min-width, $m-wd){
         display: none;
       }
 
@@ -161,7 +165,7 @@
     align-items: center;
     gap: 1rem;
 
-    @include mq(min-width, 800px){
+    @include mq(min-width, $m-wd){
       flex: 1 1 0;
       justify-content: flex-end;
     }
@@ -175,7 +179,7 @@
 
       @include icon();
 
-      @include mq(min-width, 800px){
+      @include mq(min-width, $m-wd){
         height: 1.2rem;
         font-size: 0.75rem;
 
@@ -187,7 +191,7 @@
       &.nav-account, &.nav-locale {
         display: none;
 
-        @include mq(min-width, 800px){
+        @include mq(min-width, $m-wd){
           display: block;
 
           span {
@@ -197,7 +201,7 @@
       }
 
       &.nav-toggle {
-        @include mq(min-width, 800px){
+        @include mq(min-width, $m-wd){
           display: none;
         }
       }
@@ -277,7 +281,7 @@
   background-color: rgba(0, 0, 0, 0.20);
   z-index: 1;
 
-  @include mq(min-width, 800px){
+  @include mq(min-width, $m-wd){
     display:none;
   }
 }

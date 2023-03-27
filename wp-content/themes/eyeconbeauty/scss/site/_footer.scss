@@ -2,17 +2,20 @@ footer {
   width: 100%;
   background-color: $text-color;
   color: $bg-color;
-  padding: 27px;
+  padding: 3rem $s-pd 2rem;
   padding-bottom: 2rem;
   @include d-flex();
 
-  @include mq(min-width, 800px){
-    padding: 64px;
-    padding-bottom: 2rem;
+  @include mq(min-width, $m-wd){
+    padding: 3rem $m-pd 2rem;
   }
 
-  @include mq(min-width, 1200px){
-    padding: 64px 208px 2rem;
+  @include mq(min-width, $l-wd){
+    padding: 3rem $l-pd 2rem;
+  }
+
+  @include mq(min-width, $xl-wd){
+    padding: 3rem $xl-pd 2rem;
   }
 
   .footer-copyright {
@@ -20,7 +23,7 @@ footer {
     margin-right: auto;
     font-size: 0.833333rem;
 
-    @include mq(min-width, 800px){
+    @include mq(min-width, $m-wd){
       font-size: 0.75rem
     }
   }
@@ -28,14 +31,14 @@ footer {
   .footer-group {
     @include d-flex();
 
-    @include mq(min-width, 800px){
+    @include mq(min-width, $m-wd){
       flex-direction: row;
     }
 
     .footer-info  {
       @include d-flex();
 
-      @include mq(min-width, 800px){
+      @include mq(min-width, $m-wd){
         flex: 1;
       }
 
@@ -51,7 +54,7 @@ footer {
           font-weight: 700;
           text-transform: uppercase;
 
-          @include mq(min-width, 800px){
+          @include mq(min-width, $m-wd){
             font-size: 1.25rem;
           }
         }
@@ -96,7 +99,7 @@ footer {
           font-weight: 700;
           text-transform: uppercase;
           
-          @include mq(min-width, 800px){
+          @include mq(min-width, $m-wd){
             font-size: 1rem;
           }
         }
@@ -106,7 +109,7 @@ footer {
           .menu {
             @include d-flex(row, 2rem);
             
-            @include mq(min-width, 800px){
+            @include mq(min-width, $m-wd){
               gap: 1.5rem;
             }
 
@@ -121,7 +124,7 @@ footer {
                     fill: inherit;
                   }
 
-                  @include mq(min-width, 800px){
+                  @include mq(min-width, $m-wd){
                     width: 24px;
                     height: 24px;
                   }
@@ -139,7 +142,7 @@ footer {
     text-transform: uppercase;
     font-size: 0.833333rem;
 
-    @include mq(min-width, 800px){
+    @include mq(min-width, $m-wd){
       flex: 1;
     }
     
