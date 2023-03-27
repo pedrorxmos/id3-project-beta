@@ -1,6 +1,22 @@
 .side-padding {
-	padding-left: 27px;
-	padding-right: 27px;
+	padding-left: $s-pd;
+	padding-right: $s-pd;
+	@include max-width-center($xl-wd);
+
+	@include mq(min-width, $m-wd) {
+    padding-left: $m-pd;
+		padding-right: $m-pd;
+  }
+
+  @include mq(min-width, $l-wd) {
+    padding-left: $l-pd;
+		padding-right: $l-pd;
+  }
+
+  @include mq(min-width, $xl-wd) {
+    padding-left: $xl-pd;
+		padding-right: $xl-pd;
+  }
 }
 
 .just-text-container {
