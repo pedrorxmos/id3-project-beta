@@ -1,16 +1,13 @@
 .topbar {
   background-color: $bg-color;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  
   padding: 25px $s-pd;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   text-transform: uppercase;
-  z-index: 2;
+  z-index: 300;
 
   @include mq(min-width, $m-wd){
     padding: 1.333333rem $m-pd;
@@ -22,6 +19,13 @@
 
   @include mq(min-width, $xl-wd){
     padding: 1.333333rem $xl-pd;
+  }
+
+  .topbar-container {
+    @include d-flex(row, 0);
+    justify-content: space-between;
+    align-items: center;
+    @include max-width-center($xl-wd);
   }
 
   .logo {
@@ -37,7 +41,7 @@
     @include logo();
 
     @include mq(min-width, $m-wd){
-      font-size: 0.833333rem;
+      font-size: 1rem;
       flex: 1 1 0;
 
       @include logo(1.333333rem, $magenta-color);
@@ -79,6 +83,7 @@
       @include mq(min-width, $m-wd){
         flex-direction: row;
         justify-content: center;
+        gap: 3rem;
       }
 
       .menu-item {
@@ -106,7 +111,7 @@
 
         @include mq(min-width, $m-wd){
           font-weight: 400;
-          font-size: 0.75rem;
+          font-size: 0.833333rem;
           position: relative;
 
           &:hover {
@@ -120,7 +125,7 @@
 
               .menu-item {
                 border-bottom: 1px solid transparent;
-                font-size: 0.75rem;
+                font-size: 0.8333335rem;
                 a {
                   padding: 0 2rem;
                   
@@ -168,6 +173,7 @@
     @include mq(min-width, $m-wd){
       flex: 1 1 0;
       justify-content: flex-end;
+      gap: 1.3333rem;
     }
     
     .nav-action {
@@ -180,10 +186,10 @@
       @include icon();
 
       @include mq(min-width, $m-wd){
-        height: 1.2rem;
+        height: 1.333333rem;
         font-size: 0.75rem;
 
-        @include icon(1.2rem);
+        @include icon(1.333333rem);
       }
       
       
@@ -277,9 +283,9 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   background-color: rgba(0, 0, 0, 0.20);
-  z-index: 1;
+  z-index: 200;
 
   @include mq(min-width, $m-wd){
     display:none;
