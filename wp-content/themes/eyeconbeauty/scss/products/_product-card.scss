@@ -2,6 +2,15 @@
   @include d-flex(column, 0);
   padding: 5px;
   width: 50%;
+
+  @include mq(min-width, 500px) {
+    width: 33.333333%;
+  }
+
+  @include mq(min-width, $m-wd) {
+    width: 25%;
+  }
+
     
   img {
     width: 100%;
@@ -25,6 +34,9 @@
         color: $grey-color;
         font-weight: 400;
         text-transform: uppercase;
+        @include mq(min-width, $m-wd) {
+          font-size: 0.666667em;
+        }
       }
 
       .product-info__name {
@@ -34,6 +46,10 @@
         height: 3rem;
         font-weight: 600;
         text-transform: uppercase;
+
+        @include mq(min-width, $m-wd) {
+          font-size: 1em;
+        }
       }
 
       .product-info__price {
@@ -55,15 +71,42 @@
             content: ')'
           }
         }
+
+        @include mq(min-width, $m-wd) {
+          display: none;
+        }
       }
     }
 
     .add_to_cart_button {
       padding-top: 0.5em;
       padding-bottom: 0.5em;
-      font-weight: 400;
+      font-weight: 500;
       width: 100%;
       text-align: center;
+
+      .price {
+        display: none;
+      }
+
+      @include mq(min-width, $m-wd) {
+        font-size: 0.75em;
+        .price {
+          font-weight: 700;
+          display: block;
+        }
+      }
+
+      @include mq(min-width, 900px) {
+        text-align: left;
+        @include d-flex(row, 0);
+        justify-content: space-between;
+        
+      }
+
+      @include mq(min-width, 1130px) {
+        font-size: 0.833333em;
+      }
     }
 
     .added_to_cart {
@@ -77,6 +120,14 @@
       padding: 0.25rem 1rem;
       color: $text-color;
       font-weight: 500;
+
+      @include mq(min-width, $m-wd) {
+        font-size: 0.75em;
+      }
+
+      @include mq(min-width, 1130px) {
+        font-size: 0.833333em;
+      }
     }
   }
 }

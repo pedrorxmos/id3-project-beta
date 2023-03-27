@@ -4,6 +4,19 @@
   padding: 0 20px;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include max-width-center($xl-wd);
+
+  @include mq(min-width, $m-wd) {
+    padding: 0 $m-pd;
+  }
+
+  @include mq(min-width, $l-wd) {
+    padding: 0 $l-pd;
+  }
+
+  @include mq(min-width, $xl-wd) {
+    padding: 0 $xl-pd;
+  }
 
   .btn {
     margin-left: auto;

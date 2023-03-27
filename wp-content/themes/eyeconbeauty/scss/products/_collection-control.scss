@@ -2,7 +2,20 @@
   @include d-flex(row, 0);
   justify-content: space-between;
   align-items: center;
-  padding: 0 27px 2rem;
+  padding: 0 $s-pd 2rem;
+  @include max-width-center($xl-wd);
+
+  @include mq(min-width, $m-wd) {
+    padding: 0 $m-pd 2rem;
+  }
+
+  @include mq(min-width, $l-wd) {
+    padding: 0 $l-pd 2rem;
+  }
+
+  @include mq(min-width, $xl-wd) {
+    padding: 0 $xl-pd 2rem;
+  }
 
   .woocommerce-ordering {
     position: relative;
