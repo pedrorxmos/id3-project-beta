@@ -15,3 +15,11 @@ toggle.addEventListener('click', () => {
   document.querySelector('.nav-actions').classList.toggle('open');
   document.querySelector('body').classList.toggle('overflow-hidden');
 })
+
+const overlay = document.querySelector('.overlay');
+overlay.addEventListener('click', () => {
+  document.querySelector('.navigation').classList.remove('open');
+  document.querySelector('.overlay').classList.add('hide');
+  document.querySelector('.nav-actions').classList.remove('open');
+  document.querySelector('body').classList.remove('overflow-hidden');
+})
