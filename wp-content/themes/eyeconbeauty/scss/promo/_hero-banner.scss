@@ -28,6 +28,11 @@
     font-weight: 500;
     z-index: 0;
 
+    @include mq(min-width, 800px){
+      right: 20%;
+      left: 20%;
+    }
+
     button {
       margin-top: 2rem;
     }

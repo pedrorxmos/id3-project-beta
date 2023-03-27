@@ -3,6 +3,10 @@ h1, h2, .h1, .h2 {
   font-weight: 600;
   text-transform: uppercase;
   margin: 0;
+
+  @include mq(min-width, $m-wd){
+    font-size: 1.5rem;
+  }
 }
 
 h3, .h3 {
@@ -10,4 +14,8 @@ h3, .h3 {
   font-weight: 500;
   text-transform: uppercase;
   margin: 0;
+
+  @include mq(min-width, $m-wd){
+    font-size: 1.25rem;
+  }
 }
