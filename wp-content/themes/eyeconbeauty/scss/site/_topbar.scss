@@ -12,12 +12,12 @@
   text-transform: uppercase;
   z-index: 2;
 
-  @include mq(min-width, 650px){
-    padding:32px 64px;
+  @include mq(min-width, 800px){
+    padding: 1.333333rem 64px;
   }
 
   @include mq(min-width, 1200px){
-    padding:32px 208px;
+    padding: 1.333333rem 208px;
   }
 
   .logo {
@@ -32,8 +32,11 @@
 
     @include logo();
 
-    @include mq(min-width, 1024px){
+    @include mq(min-width, 800px){
+      font-size: 0.833333rem;
       flex: 1 1 0;
+
+      @include logo(1.333333rem, $magenta-color);
     }
   }
 
@@ -51,13 +54,13 @@
     justify-content: space-between;
     transition: right ease-in-out .3s;
 
-    @include mq(min-width, 1024px){
+    @include mq(min-width, 800px){
       position: static;
       flex-direction: row;
       height: 100%;
       padding: 0;
       justify-content: center;
-      flex: 1 1 0;
+      flex: 2 1 0;
     }
     
     &.open {
@@ -69,7 +72,7 @@
       flex-direction: column;
       gap: 2.666667rem;
 
-      @include mq(min-width, 1024px){
+      @include mq(min-width, 800px){
         flex-direction: row;
         justify-content: center;
       }
@@ -81,22 +84,12 @@
         flex-direction: column;
         gap: 1.333333rem;
 
-        @include mq(min-width, 1024px){
-          font-weight: 400;
-
-          &:hover {
-            .sub-menu {
-              display: flex;
-            }
-          }
-        }
-
         .sub-menu {
           display: flex;
           flex-direction: column;
           gap: 1.333333rem;
 
-          @include mq(min-width, 1024px){
+          @include mq(min-width, 800px){
             display: none;
           }
           
@@ -104,6 +97,35 @@
           .menu-item {
             font-size: 1.166667rem;
             font-weight: 400;
+          }
+        }
+
+        @include mq(min-width, 800px){
+          font-weight: 400;
+          font-size: 0.75rem;
+          position: relative;
+
+          &:hover {
+            .sub-menu {
+              display: flex;
+              position: absolute;
+              background-color: $bg-color;
+              padding: 2rem 0rem 1rem;
+              top: 100%;
+              left: -2rem;
+
+              .menu-item {
+                border-bottom: 1px solid transparent;
+                font-size: 0.75rem;
+                a {
+                  padding: 0 2rem;
+                  
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
           }
         }
         
@@ -117,7 +139,7 @@
       flex-direction: row;
       justify-content: space-between;
 
-      @include mq(min-width, 1024px){
+      @include mq(min-width, 800px){
         display: none;
       }
 
@@ -139,7 +161,7 @@
     align-items: center;
     gap: 1rem;
 
-    @include mq(min-width, 1024px){
+    @include mq(min-width, 800px){
       flex: 1 1 0;
       justify-content: flex-end;
     }
@@ -148,22 +170,34 @@
       background: none;
       border: none;
       padding: 0;
-      width: 2rem;
       height: 2rem;
       cursor:pointer;
-      
+
       @include icon();
+
+      @include mq(min-width, 800px){
+        height: 1.2rem;
+        font-size: 0.75rem;
+
+        @include icon(1.2rem);
+      }
+      
+      
 
       &.nav-account, &.nav-locale {
         display: none;
 
-        @include mq(min-width, 1024px){
+        @include mq(min-width, 800px){
           display: block;
+
+          span {
+            display: none;
+          }
         }
       }
 
       &.nav-toggle {
-        @include mq(min-width, 1024px){
+        @include mq(min-width, 800px){
           display: none;
         }
       }
@@ -185,12 +219,12 @@
           align-items: center;
           position: absolute;
           z-index: 3;
-          font-size: 0.833333rem;
+          font-size: 0.75em;
           font-weight: 600;
           color: $bg-color;
           border-radius: 50%;
-          height: 1.333333rem;
-          width: 1.333333rem;
+          height: 1.333333em;
+          width: 1.333333em;
           left: 70%;
           bottom: 70%;
           background-color: $magenta-color;
@@ -243,7 +277,7 @@
   background-color: rgba(0, 0, 0, 0.20);
   z-index: 1;
 
-  @include mq(min-width, 1024px){
+  @include mq(min-width, 800px){
     display:none;
   }
 }
