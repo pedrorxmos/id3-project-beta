@@ -1,7 +1,7 @@
 .side-padding {
 	padding-left: $s-pd;
 	padding-right: $s-pd;
-	@include max-width-center($xl-wd);
+	@include max-width-center();
 
 	@include mq(min-width, $m-wd) {
     padding-left: $m-pd;
