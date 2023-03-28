@@ -10,21 +10,21 @@
   z-index: 300;
 
   @include mq(min-width, $m-wd){
-    padding: 1.333333rem $m-pd;
+    padding: 1.333333rem $m-pd 0;
   }
 
   @include mq(min-width, $l-wd){
-    padding: 1.333333rem $l-pd;
+    padding: 1.333333rem $l-pd 0;
   }
 
   @include mq(min-width, $xl-wd){
-    padding: 1.333333rem $xl-pd;
+    padding: 1.333333rem $xl-pd 0;
   }
 
   .topbar-container {
     @include d-flex(row, 0);
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     @include max-width-center($xl-wd);
   }
 
@@ -112,26 +112,42 @@
         @include mq(min-width, $m-wd){
           font-weight: 400;
           font-size: 0.833333rem;
-          position: relative;
+          padding-bottom: 1.333333rem;
+          
 
           &:hover {
+            padding-bottom: calc(1.333333rem - 2px);
+            border-bottom: 2px solid $magenta-color;
             .sub-menu {
-              display: flex;
+              @include d-flex(row, 2rem);
               position: absolute;
               background-color: $bg-color;
-              padding: 2rem 0rem 1rem;
+
+              @include mq(min-width, $m-wd) {
+                padding: 1.666667rem $m-pd;
+              }
+
+              @include mq(min-width, $l-wd) {
+                padding: 1.666667rem $l-pd;
+              }
+
+              @include mq(min-width, $xl-wd) {
+                padding: 1.666667rem $xl-pd;
+              }
+
               top: 100%;
-              left: -2rem;
+              left: 0;
+              right: 0;
+              background-color: darken($bg-color, 0.75);
+              border-top: none;
 
               .menu-item {
-                border-bottom: 1px solid transparent;
                 font-size: 0.8333335rem;
-                a {
-                  padding: 0 2rem;
-                  
-                  &:hover {
-                    text-decoration: underline;
-                  }
+                padding-bottom: 0;
+                border-bottom: 2px solid transparent;
+                
+                &:hover {
+                  border-bottom-color: $cyan-color;
                 }
               }
             }
