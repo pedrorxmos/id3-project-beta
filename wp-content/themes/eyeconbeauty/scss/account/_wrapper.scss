@@ -1,8 +1,32 @@
 .account-wrapper {
   @include d-flex(column, 2rem);
 
+  @include max-width-center();
+
+	@include mq(min-width, $m-wd) {
+    padding-left: $m-pd;
+		padding-right: $m-pd;
+  }
+
+  @include mq(min-width, $l-wd) {
+    padding-left: $l-pd;
+		padding-right: $l-pd;
+    flex-direction: row;
+  }
+
+  @include mq(min-width, $xl-wd) {
+    padding-left: $xl-pd;
+		padding-right: $xl-pd;
+  }
+
   .account__navigation {
-    padding: 0 27px;
+    padding: 0 $s-pd;
+
+    @include mq(min-width, $l-wd) {
+      padding: 0;
+      width: 100%;
+      flex: 1.5;
+    }
   }
   .account__content {
     @include d-flex(column, 1.666667rem);
@@ -11,6 +35,11 @@
     border: 1px solid $grey5;
     padding: 2rem;
     margin: 0 1rem;
+    
+    @include mq(min-width, $l-wd) {
+      width: 100%;
+      flex: 2.5;
+    }
 
     .woocommerce-notices-wrapper {
       padding: 0;

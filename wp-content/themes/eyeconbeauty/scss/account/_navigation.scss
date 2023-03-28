@@ -1,5 +1,5 @@
 .account__navigation {
-  
+  text-transform: uppercase;
 
   .account__dropdown {
     margin: 0;
@@ -14,6 +14,7 @@
     font-size: 1rem;
     cursor: pointer;
     position: relative;
+    
   
     .toggle-icon {
       width: 20px;
@@ -41,6 +42,10 @@
         }
       }
     }
+
+    @include mq(min-width, $l-wd) {
+      display: none;
+    }
   }
 
   .account__items {
@@ -53,12 +58,26 @@
     margin: 0;
     @include d-flex(column, 0);
     transition: max-height .2s;
-    padding: 0 27px;
+    padding: 0 $s-pd;
+
+    @include mq(min-width, $m-wd) {
+      padding: 0 calc($m-pd + $s-pd);
+    }
 
     .account__item {
       display: flex;
       align-items: stretch;
       background-color: $bg-color;
+
+      @include mq(min-width, $l-wd) {
+        border-radius: 0.833333rem;
+        background-color: $grey6;
+
+        &:last-child {
+          background: none;
+          margin-top: 3rem;
+        }
+      }
 
       &.is-active {
         background-color: $cyan-color;
@@ -69,8 +88,28 @@
         width: 100%;
         padding: 1rem 2rem;
         border-bottom: 1px solid $grey4;
+
+        @include mq(min-width, $l-wd) {
+          border: none;
+          padding: 1rem 0.5rem;
+          text-align: center;
+          font-size: 0.75rem;
+        }
       }
       
     }
+
+    @include mq(min-width, $l-wd) {
+      position: static;
+      max-height: unset;
+
+      @include d-flex(column, 1.666667rem);
+      background-color: lighten($grey6, 4);
+      border-radius: 1.666667rem;
+      border: 1px solid $grey5;
+      padding: 2rem;
+    }
+
+
   }
 }
