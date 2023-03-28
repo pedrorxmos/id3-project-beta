@@ -1,115 +1,134 @@
 .field {
-  width: 100%;
-  @include d-flex(column, 0.5rem);
+	width: 100%;
+	@include d-flex(column, 0.5rem);
 
-  p {
-    @include d-flex(column, 0.5rem);
+	p {
+		@include d-flex(column, 0.5rem);
 
-    br {
-      display: none;
-    }
-  }
+		br {
+			display: none;
+		}
+	}
 
-  input, textarea, select {
-    -moz-appearance:none; /* Firefox */
-    -webkit-appearance:none; /* Safari and Chrome */
-    appearance:none;
-    width: 100%;
-    margin: 0;
-    background: $grey6;
-    border: none;
-    border-bottom: 1px solid $text-color;
-    font-size: 1rem;
-    font-family: $font-family;
-    padding: 1rem 2rem;
-    color: $text-color;
-    font-size: 1rem;
-    z-index: 0;
+	input,
+	textarea,
+	select {
+		-moz-appearance: none; /* Firefox */
+		-webkit-appearance: none; /* Safari and Chrome */
+		appearance: none;
+		width: 100%;
+		margin: 0;
+		background: $grey6;
+		border: none;
+		border-bottom: 1px solid $text-color;
+		font-size: 1rem;
+		font-family: $font-family;
+		padding: 1rem 2rem;
+		color: $text-color;
+		font-size: 1rem;
+		z-index: 0;
 
-    &:focus {
-      border-bottom-color: $magenta-color;
-      outline: none;
-    }
-  }
+		&:focus {
+			border-bottom-color: $magenta-color;
+			outline: none;
+		}
 
-  label {
-    padding-left: 0.333333rem;
-  }
+		@include mq(min-width, $m-wd) {
+			font-size: 0.833333rem;
+			padding: 0.833333rem 1.666667rem;
+		}
+	}
 
-  &.field-area {
-    textarea {
-      resize: vertical;
-    }
-    
-  }
+	label {
+		padding-left: 0.333333rem;
+	}
 
+	&.field-area {
+		textarea {
+			resize: vertical;
+		}
+	}
 }
 
 .field-submit {
-  input {
-    width: 100%;
+	input {
+		width: 100%;
 
-    &:disabled {
-      opacity: 0.5;
-    }
-  }
+		&:disabled {
+			opacity: 0.5;
+		}
+	}
 }
 
 .field-group {
-  @include d-flex(row, 2rem);
+	@include d-flex(row, 2rem);
 }
 
 .field-checkbox {
+	.wpcf7-list-item {
+		margin: 0;
+	}
 
-  .wpcf7-list-item {
-    margin: 0;
-  }
-
-  label {
-    @include d-flex(row, 1rem);
-    align-items: center;
-
-    input {
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      position: relative;
-      width: 1.833333rem;
-      height: 1.833333rem;
-      margin: 0;
-      border-radius: 0.5rem;
-      border: 1px solid $grey4;
-      background-color: $bg-color;
-      cursor: pointer;
-
-      &:checked {
-        border: 1px solid $cyan-color;
-        background-color: $cyan-color;
-
-        &:after {
-          content: '\2713';
-          font-size: 1.166667rem;
-          font-family: $font-family;
-          font-weight: 600;
-          color: $text-color;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          font-weight: bold;
-          margin: auto;
-        }
-      }
+	label {
+		@include d-flex(row, 1rem);
+		align-items: center;
+    @include mq(min-width, $m-wd) {
+      font-size: 0.833333rem;
     }
-  }
 
-  span {
-    flex: 1;
-  }
+		input {
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			position: relative;
+			width: 1.833333rem;
+			height: 1.833333rem;
+			margin: 0;
+			border-radius: 0.5rem;
+			border: 1px solid $grey4;
+			background-color: $bg-color;
+			cursor: pointer;
+
+			@include mq(min-width, $m-wd) {
+				width: 1rem;
+				height: 1rem;
+				border-radius: 0.25rem;
+			}
+
+			&:checked {
+				border: 1px solid $cyan-color;
+				background-color: $cyan-color;
+
+				&:after {
+					content: '\2713';
+					font-size: 1.166667rem;
+          @include mq(min-width, $m-wd) {
+            font-size: 0.833333rem;
+          }
+					font-family: $font-family;
+					font-weight: 600;
+					color: $text-color;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					font-weight: bold;
+					margin: auto;
+				}
+			}
+		}
+	}
+
+	span {
+		flex: 1;
+	}
 }
 
 .field-link {
-  a{
-    border-bottom: 1px solid $text-color;
-  }
+	a {
+		border-bottom: 1px solid $text-color;
+    @include mq(min-width, $m-wd) {
+      font-size: 0.833333rem;
+    }
+	}
 }

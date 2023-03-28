@@ -1,9 +1,31 @@
 .account-access {
   @include d-flex(column, 4rem);
-  padding: 0 27px 2rem;
+  padding: 0 $s-pd 2rem;
+
+  @include max-width-center();
+
+	@include mq(min-width, $m-wd) {
+    padding-left: $m-pd;
+		padding-right: $m-pd;
+  }
+
+  @include mq(min-width, $l-wd) {
+    padding-left: $l-pd;
+		padding-right: $l-pd;
+    flex-direction: row;
+  }
+
+  @include mq(min-width, $xl-wd) {
+    padding-left: $xl-pd;
+		padding-right: $xl-pd;
+  }
 
   .access__group {
     @include d-flex(column, 1rem);
+    flex: 1;
+    @include mq(min-width, $l-wd) {
+      gap: 0.75rem;
+    }
 
     h3{
       font-weight: 600;
@@ -11,7 +33,9 @@
 
     .access__form {
       @include d-flex(column, 1.666667rem);
-
+      @include mq(min-width, $l-wd) {
+        gap: 1rem;
+      }
       .field-group {
         justify-content: space-between;
         align-items: flex-end;
