@@ -25,6 +25,10 @@
     padding: 0 5px 2.5rem;
     position: relative;
 
+    @include mq(min-width, $m-wd) {
+      gap: 1rem;
+    }
+
     .product-info__info {
       @include d-flex(column, 5px);
       padding-top: 1rem;
@@ -35,7 +39,7 @@
         font-weight: 400;
         text-transform: uppercase;
         @include mq(min-width, $m-wd) {
-          font-size: 0.666667em;
+          font-size: 0.625em;
         }
       }
 
@@ -48,7 +52,7 @@
         text-transform: uppercase;
 
         @include mq(min-width, $m-wd) {
-          font-size: 1em;
+          font-size: 0.833333em;
         }
       }
 
