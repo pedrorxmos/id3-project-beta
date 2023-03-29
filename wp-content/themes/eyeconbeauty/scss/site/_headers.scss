@@ -16,6 +16,6 @@ h3, .h3 {
   margin: 0;
 
   @include mq(min-width, $m-wd){
-    font-size: 1.25rem;
+    font-size: 1.0333333rem;
   }
 }

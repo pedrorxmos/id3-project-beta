@@ -26,6 +26,7 @@ body {
 
 		@include mq(min-width, 800px) {
 			margin-top: 61px;
+			padding-top: 1.5rem;
 		}
 	} 
 
