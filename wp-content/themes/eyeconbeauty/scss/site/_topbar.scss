@@ -278,16 +278,30 @@
   }
 
   &.topbar-checkout {
+
+    .topbar-container {
+      align-items: center;
+    }
+
     .return-bag {
       margin-right: 0.5rem;
-      font-weight: 600;
+      font-weight: 500;
       @include d-flex(row, 0.5rem);
       align-items: center;
+
+      @include mq(min-width, $m-wd){
+        font-size: 0.833333rem;
+      }
 
       svg {
         width: 1rem;
         height: 1rem;
         stroke-width: 2px;
+
+        @include mq(min-width, $m-wd){
+          width: 0.833333rem;
+          height: 0.833333rem;
+        }
       }
       
     }
