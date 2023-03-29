@@ -1,6 +1,11 @@
 .cart-actions {
   @include d-flex(column, 2rem);
   padding: 0 2rem;
+
+  @include mq(min-width, $m-wd) {
+    flex: 1.5;
+    width: 100%;
+  }
 }
 
 .cart-collaterals {

@@ -1,10 +1,18 @@
 .coupon {
   @include d-flex(column, 0.666667rem);
+
+  
   .field-group {
     align-items: flex-end;
+    @include mq(min-width, $m-wd) {
+      gap: 0.75rem;
+    }
 
     .field {
       flex: 3;
+      @include mq(min-width, $m-wd) {
+        flex: 3.5;
+      }
     }
     .btn {
       flex: 1;
@@ -12,6 +20,12 @@
       font-weight: 400;
       width: 100%;
       text-align: center;
+
+      @include mq(min-width, $m-wd) {
+        font-size: 0.833333rem;
+        padding: 0.833333rem 1.666667rem;
+        flex: 0.5;
+      }
     }
     
   }

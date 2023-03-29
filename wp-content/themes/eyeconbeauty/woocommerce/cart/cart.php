@@ -68,6 +68,18 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 							<div class="product-details" >
 								<div class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
+
+								<p class="name__category">
+										<!-- Category  -->
+									<?php
+										$terms = get_the_terms( $product_id, 'product_cat' );
+										foreach ($terms as $term) {
+												$product_cat_id = $term->term_id;
+												echo get_the_category_by_ID($product_cat_id);
+												break;
+										} 
+										?>
+									</p>	
 									<?php
 										if ( ! $product_permalink ) {
 											echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
@@ -86,17 +98,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 										}
 									?>
 
-									<p class="name__category">
-										<!-- Category  -->
-									<?php
-										$terms = get_the_terms( $product_id, 'product_cat' );
-										foreach ($terms as $term) {
-												$product_cat_id = $term->term_id;
-												echo get_the_category_by_ID($product_cat_id);
-												break;
-										} 
-										?>
-									</p>
+									
 									
 								</div>
 								<div class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">

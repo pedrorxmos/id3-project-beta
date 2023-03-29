@@ -9,6 +9,10 @@
 
     tbody {
       @include d-flex(column, 0.5rem);
+
+      @include mq(min-width, $m-wd) {
+        font-size: 0.75rem;
+      }
     }
     
     tr {
@@ -17,6 +21,9 @@
 
       &.order-total {
         font-size: 1.333333rem;
+        @include mq(min-width, $m-wd) {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -34,6 +41,10 @@
       background-color: $magenta-color;
       color: $bg-color;
       width: 100%;
+      @include mq(min-width, $m-wd) {
+        padding: 0.75rem;
+        font-size: 1rem;
+      }
     }
   }
 }

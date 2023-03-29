@@ -1,12 +1,37 @@
 .woocommerce-cart-form, .checkout-cart {
   @include d-flex(column, 2rem);
 
+  @include max-width-center();
+
+	@include mq(min-width, $m-wd) {
+    padding-left: $m-pd;
+		padding-right: $m-pd;
+    flex-direction: row;
+    justify-content: stretch;
+  }
+
+  @include mq(min-width, $l-wd) {
+    padding-left: $l-pd;
+		padding-right: $l-pd;
+  }
+
+  @include mq(min-width, $xl-wd) {
+    padding-left: $xl-pd;
+		padding-right: $xl-pd;
+  }
+
   table, thead, tbody, tr, td {
     display: block;
   }
 
   .shop_table {
-    padding-right: 27px;
+    padding-right: $s-pd;
+
+    @include mq(min-width, $m-wd) {
+      padding-right: 0;
+      flex: 2.5;
+      width: 100%;
+    }
     
     tbody {
       @include d-flex(column, 1rem);
@@ -37,6 +62,11 @@
             width: 60px;
             height: 75px;
             object-fit: cover;  
+
+            @include mq(min-width, $m-wd) {
+              width: 88px;
+              height: 100px;
+            }
           }
         }
 
@@ -54,10 +84,16 @@
               width: fit-content;
               font-size: 1rem;
               font-weight: 600;
+              @include mq(min-width, $m-wd) {
+                font-size: 0.833333rem;
+              }
             }
   
             .name__category {
               font-size: 0.833333rem;
+              @include mq(min-width, $m-wd) {
+                font-size: 0.625rem;
+              }
             }
           }
   
@@ -65,6 +101,9 @@
             font-size: 1rem;
             color: $text-color;
             font-weight: 400;
+            @include mq(min-width, $m-wd) {
+              font-size: 0.833333rem;
+            }
           }
         }
       }
@@ -88,6 +127,9 @@
             font-weight: 400;
             font-size: 1.333333rem;
             gap: 1rem;
+            @include mq(min-width, $m-wd) {
+              font-size: 0.833333rem;
+            }
           }
   
           .qty-btn {
@@ -98,6 +140,9 @@
             @include d-flex();
             justify-content: center;
             align-items: center;
+            @include mq(min-width, $m-wd) {
+              width: 1rem;
+            }
 
             svg {
               width: 15px;
@@ -112,11 +157,17 @@
           }
   
           .quantity {
+            margin: 0;
+            padding: 0; 
+            @include d-flex();
             label {
               display: none;
             }
 
             input {
+              -moz-appearance: textfield; /* Firefox */
+              -webkit-appearance: textfield; /* Safari and Chrome */
+              appearance: textfield;
               background: none;
               border: none;
               width: 2rem;
@@ -124,7 +175,19 @@
               font-family: $font-family;
               font-weight: 400;
               font-size: 1.333333rem;
+              padding: 0;
               z-index: 0;
+
+              &::-webkit-outer-spin-button,
+              &::-webkit-inner-spin-button {
+                  -webkit-appearance: none;
+                  margin: 0;
+}
+              @include mq(min-width, $m-wd) {
+                width: 2rem;
+                font-size: 1rem;
+                margin: 0;
+              }
             }
           }
         }
@@ -133,6 +196,9 @@
           font-size: 1rem;
           color: $text-color;
           font-weight: 600;
+          @include mq(min-width, $m-wd) {
+            font-size: 0.833333rem;
+          }
         }
       }
     }
@@ -143,5 +209,10 @@
   .shop_table {
     @include d-flex(column, 1.333333rem);
     padding-right: 0px;
+
+    @include mq(min-width, $m-wd) {
+      flex: 100%;
+      width: 100%;
+    }
   }
 }
