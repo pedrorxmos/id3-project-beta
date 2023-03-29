@@ -1,3 +1,23 @@
 .order_review {
   @include d-flex(column, 1.666667rem);
+  flex: 1.5;
+  position: sticky;
+
+  .checkout-cart {
+    max-width: none;
+    margin: 0;
+
+    @include mq(min-width, $m-wd) {
+      padding: 0;
+      display: block;
+    }
+
+    @include mq(min-width, $l-wd) {
+      padding: 0;
+    }
+
+    @include mq(min-width, $xl-wd) {
+      padding: 0;
+    }
+  }
 }

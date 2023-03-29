@@ -1,9 +1,29 @@
 .checkout {
-  padding: 0 27px;
+  padding: 0 $s-pd;
   @include d-flex(column, 1.666667rem);
+
+  @include max-width-center();
+
+	@include mq(min-width, $m-wd) {
+    padding-left: $m-pd;
+		padding-right: $m-pd;
+
+    flex-direction: row;
+  }
+
+  @include mq(min-width, $l-wd) {
+    padding-left: $l-pd;
+		padding-right: $l-pd;
+  }
+
+  @include mq(min-width, $xl-wd) {
+    padding-left: $xl-pd;
+		padding-right: $xl-pd;
+  }
 
   .checkout-group {
     @include d-flex(column, 1.666667rem);
+    flex: 2.5;
 
     &.additional-fields {
       padding-top: 1.666667rem;

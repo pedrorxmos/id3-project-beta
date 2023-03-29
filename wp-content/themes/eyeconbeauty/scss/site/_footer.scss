@@ -6,6 +6,7 @@ footer {
   padding-bottom: 2rem;
   @include d-flex();
 
+
   @include mq(min-width, $m-wd){
     padding: 3rem $m-pd 2rem;
   }

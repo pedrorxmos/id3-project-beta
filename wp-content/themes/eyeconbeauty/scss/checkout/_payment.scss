@@ -13,6 +13,11 @@
         border-radius: 0.833333rem;
         font-weight: 600;
         text-transform: uppercase;
+
+        @include mq(min-width, $m-wd) {
+          padding: 0.833333rem 1rem;
+          font-size: 0.8333333rem;;
+        }
       }
 
       input {
@@ -35,6 +40,9 @@
   .place-order {
     padding-top: 3rem;
     @include d-flex(column, 2rem);
+    @include mq(min-width, $m-wd) {
+      font-size: 0.75rem;
+    }
 
     .terms-conditions-checkout {
       @include d-flex(column, 1rem);
@@ -50,6 +58,11 @@
       color: $bg-color;
       padding-left: 3rem;
       padding-right: 3rem;
+
+      @include mq(min-width, $m-wd) {
+        padding: 0.75rem;
+        font-size: 1rem;
+      }
     }
   }
 }
