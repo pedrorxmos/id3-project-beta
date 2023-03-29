@@ -1,6 +1,22 @@
 
 .thankyou-wrapper {
   @include d-flex(column, 2rem);
+  @include max-width-center();
+
+	@include mq(min-width, $m-wd) {
+    padding-left: $m-pd;
+		padding-right: $m-pd;
+  }
+
+  @include mq(min-width, $l-wd) {
+    padding-left: $l-pd;
+		padding-right: $l-pd;
+  }
+
+  @include mq(min-width, $xl-wd) {
+    padding-left: $xl-pd;
+		padding-right: $xl-pd;
+  }
   .thankyou-section {
     @include d-flex(column, 1.666667rem);
     background-color: lighten($grey6, 4);
@@ -11,6 +27,9 @@
   
     .order_details {
       @include d-flex(column, 0.5rem);
+      @include mq(min-width, $m-wd) {
+        font-size: 0.8333333rem;
+      }
 
       .payment-method-info {
         padding-top: 2rem;
@@ -32,6 +51,24 @@
             }
           }
         }
+      }
+    }
+
+    .checkout-cart {
+      max-width: none;
+      margin: 0;
+  
+      @include mq(min-width, $m-wd) {
+        padding: 0;
+        display: block;
+      }
+  
+      @include mq(min-width, $l-wd) {
+        padding: 0;
+      }
+  
+      @include mq(min-width, $xl-wd) {
+        padding: 0;
       }
     }
   }
