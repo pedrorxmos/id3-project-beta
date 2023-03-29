@@ -12,7 +12,7 @@
             <input type="email" name="newsletter-email" id="newsletter-email" placeholder='Enter your email*' />
           </div>
           <p class='newsletter-disclaimer'>
-            * By signing to our newsletter you are agreeing to receive varying number of marketing emails, and by extend you are agreeing to our <a href="#terms-and-conditions">Terms & Conditions</a>  and <a href="#terms-and-conditions">Privacy Policy</a> .
+            * By signing to our newsletter you are agreeing to receive varying number of marketing emails, and by extend you are agreeing to our <a href="<?php echo home_url ( '/terms-conditions/' );?>" alt="Terms and conditions">Terms & Conditions</a>  and <a href="<?php echo home_url ( '/privacy-policy/' );?>" alt="Privacy Policy">Privacy Policy</a> .
           </p>
         </div>
         <div class="footer-socialmedia">
@@ -45,7 +45,7 @@
         <div class="footer-col">
           <ul class="nav-group">
             <li class="nav-item">
-              <a href="<?php echo home_url ( '/shop/' ); ?>">Shop</a>
+              <a href="<?php echo home_url ( '/shop/' ); ?>" alt="Shop">Shop</a>
               <?php
                 wp_nav_menu ( array
                 (
