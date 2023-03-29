@@ -28,12 +28,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		
 				<div <?php wc_product_class( 'product-card ', $product ); ?>>
 				<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
-				<a href="<?php the_permalink() ?>" alt="Product <?php echo get_the_title(); ?>">
+				<a href="<?php the_permalink() ?>">
             <?php the_post_thumbnail() ?>
           </a>
           
           <div class="product-info">
-            <a href="<?php the_permalink() ?>" alt="Product <?php echo get_the_title(); ?>">
+            <a href="<?php the_permalink() ?>" >
               <div class="product-info__info">
                 <p class="product-info__category">
                   <!-- Category  -->

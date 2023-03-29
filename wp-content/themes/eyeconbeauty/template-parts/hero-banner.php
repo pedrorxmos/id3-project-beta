@@ -7,7 +7,7 @@
   $id = $page->ID;
 ?>
 
-<a href="<?php echo home_url( '/shop/' ); ?>" class="herobanner" alt="Shop">
+<a href="<?php echo home_url( '/shop/' ); ?>" class="herobanner">
   <div class="herobanner__img" style="background-image: url(<?php echo get_the_post_thumbnail_url($id) ?>);"></div>
 
   <div class="herobanner__info">

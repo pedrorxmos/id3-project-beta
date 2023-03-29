@@ -42,7 +42,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 									echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 										'woocommerce_cart_item_remove_link',
 										sprintf(
-											'<a href="%s" alt="remove cart" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+											'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
 											esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
 											esc_html__( 'Remove this item', 'woocommerce' ),
 											esc_attr( $product_id ),
@@ -60,7 +60,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 									if ( ! $product_permalink ) {
 										echo $thumbnail; // PHPCS: XSS ok.
 									} else {
-										printf( '<a href="%s" alt="product">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
+										printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
 									}
 								?>
 							</div>
@@ -84,7 +84,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 										if ( ! $product_permalink ) {
 											echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
 										} else {
-											echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s" alt="product">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
+											echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
 										}
 
 										do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );

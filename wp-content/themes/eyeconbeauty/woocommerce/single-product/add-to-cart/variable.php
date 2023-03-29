@@ -45,7 +45,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 <span class="product-wrapper__dropdown">
 	<div class="dropdown__title">
-		<img class="dd-title__img" src="https://esatdev.com/2022/pedroramos/eyeconbeauty/wp-content/uploads/2023/03/<?php echo $var ? $var : $base_var ?>-shade.png" alt="sdfdsdf">
+		<img class="dd-title__img" src="https://esatdev.com/2022/pedroramos/eyeconbeauty/wp-content/uploads/2023/03/<?php echo $var ? $var : $base_var ?>-shade.png" alt="Shade color">
 		<p class="dd-title__name"><?php echo $var_name ? $var_name : $base_name_var ?></p>
 	</div>
 

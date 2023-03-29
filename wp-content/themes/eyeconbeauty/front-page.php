@@ -30,12 +30,12 @@
       <?php if ($wc_query->have_posts()) : ?>
       <?php while ($wc_query->have_posts()) : $wc_query->the_post(); ?>
         <div class="product-card product-slider__card">
-        <a href="<?php the_permalink() ?>" alt="Product <?php echo get_the_title(); ?>">
+        <a href="<?php the_permalink() ?>">
             <?php the_post_thumbnail();?>
           </a>
           
           <div class="product-info">
-            <a href="<?php the_permalink() ?>" alt="Product <?php echo get_the_title(); ?>">
+            <a href="<?php the_permalink() ?>">
               <div class="product-info__info">
                 <p class="product-info__category">
                   <!-- Category  -->
@@ -76,7 +76,7 @@
       <?php endif; ?>
     </div>
 
-    <a href="<?php echo home_url( '/shop/' ); ?>" class="btn btn-main product-slider__btn" alt="Shop">Shop Products</a>
+    <a href="<?php echo home_url( '/shop/' ); ?>" class="btn btn-main product-slider__btn">Shop Products</a>
   </div>
     <?php 
       get_template_part(
@@ -107,12 +107,12 @@
       <?php if ($wc_query->have_posts()) : ?>
       <?php while ($wc_query->have_posts()) : $wc_query->the_post(); ?>
         <div class="product-card product-slider__card">
-        <a href="<?php the_permalink() ?>" alt="Product <?php echo get_the_title(); ?>">
+        <a href="<?php the_permalink() ?>"
             <?php the_post_thumbnail();?>
           </a>
           
           <div class="product-info">
-            <a href="<?php the_permalink() ?>" alt="Product <?php echo get_the_title(); ?>">
+            <a href="<?php the_permalink() ?>">
               <div class="product-info__info">
                 <p class="product-info__category">
                   <!-- Category  -->
