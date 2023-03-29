@@ -33,7 +33,7 @@
 
     .access__form {
       @include d-flex(column, 1.666667rem);
-      @include mq(min-width, $l-wd) {
+      @include mq(min-width, $m-wd) {
         gap: 1rem;
       }
       .field-group {

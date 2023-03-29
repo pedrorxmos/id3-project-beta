@@ -1,11 +1,37 @@
 .contact-page {
-  padding: 0 27px;
+  padding: 0 $s-pd;
   @include d-flex(column, 2.333333rem);
+
+  @include max-width-center();
+
+	@include mq(min-width, $m-wd) {
+    padding-left: $m-pd;
+		padding-right: $m-pd;
+    flex-direction: row;
+  }
+
+  @include mq(min-width, $l-wd) {
+    padding-left: $l-pd;
+		padding-right: $l-pd;
+  }
+
+  @include mq(min-width, $xl-wd) {
+    padding-left: $xl-pd;
+		padding-right: $xl-pd;
+  }
 
   .contact-page__section {
     @include d-flex(column, 2rem);
 
+    @include mq(min-width, $m-wd) {
+     flex: 1.5;
+
+     &:nth-child(2n) {
+      flex: 2.5;
+     }
+    }
     .section__contacts {
+      @include d-flex(column, 1rem);
       .contact--line {
         @include d-flex(row, 0.5rem);
         align-items: center;

@@ -41,6 +41,10 @@
 
 	label {
 		padding-left: 0.333333rem;
+
+		@include mq(min-width, $m-wd) {
+			font-size: 0.833333rem;
+		}
 	}
 
 	&.field-area {
