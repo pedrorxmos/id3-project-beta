@@ -37,7 +37,7 @@ defined( 'ABSPATH' ) || exit;
 									if ( ! $product_permalink ) {
 										echo $thumbnail; // PHPCS: XSS ok.
 									} else {
-										printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
+										printf( '<a href="%s" alt="product">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
 									}
 								?>
 							</div>

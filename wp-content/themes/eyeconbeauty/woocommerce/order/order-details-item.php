@@ -37,7 +37,7 @@ if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 				if ( ! $product_permalink ) {
 					echo $thumbnail; // PHPCS: XSS ok.
 				} else {
-					printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
+					printf( '<a href="%s" alt="Product %s">%s</a>', esc_url( $product_permalink ), get_the_title(), $thumbnail ); // PHPCS: XSS ok.
 				}
 			?>
 		</div>
@@ -54,7 +54,7 @@ if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 					} 
 					?>
 				</p>
-				<?php echo wp_kses_post( apply_filters( 'woocommerce_order_item_name', $product_permalink ? sprintf( '<a href="%s">%s</a>', $product_permalink, $item->get_name() ) : $item->get_name(), $item, $is_visible ) );?>
+				<?php echo wp_kses_post( apply_filters( 'woocommerce_order_item_name', $product_permalink ? sprintf( '<a href="%s" alt="Product %s">%s</a>', $product_permalink, $item->get_name() ) : $item->get_name(), $item, $is_visible ) );?>
 			</div>
 
 			<div class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
