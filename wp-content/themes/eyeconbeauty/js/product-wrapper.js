@@ -17,12 +17,12 @@ const changeWrapperPosition = () => {
 			} else {
 				wrapper.style.position = 'static';
 				wrapper.style.padding = '0';
-				detail.style.paddingBottom = '0px';
+				detail.style.paddingBottom = '2rem';
 			}
 		} else {
 			wrapper.style.position = 'static';
 			wrapper.style.padding = '0';
-			detail.style.paddingBottom = '0px';
+			detail.style.paddingBottom = '2rem';
 		}
 	}	
 }
