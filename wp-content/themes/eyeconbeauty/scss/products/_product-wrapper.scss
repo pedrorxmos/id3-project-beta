@@ -30,8 +30,8 @@
     font-size: 1rem;
 
     @include mq(min-width, $m-wd) {
-			font-size: 0.833333rem;
-			padding: 0.833333rem 1.666667rem;
+			// font-size: 0.833333rem;
+			// padding: 0.833333rem 1.666667rem;
 		}
 
     .dropdown__title {
@@ -42,8 +42,8 @@
         width: 1.5rem;
 
         @include mq(min-width, $m-wd) {
-          height: 1.25rem;
-          width: 1.25rem;
+          // height: 1.25rem;
+          // width: 1.25rem;
         }
       }
     }
@@ -54,8 +54,8 @@
       stroke: $text-color;
 
       @include mq(min-width, $m-wd) {
-        height: 1rem;
-        width: 1rem;
+        // height: 1rem;
+        // width: 1rem;
       }
 
       &.down {

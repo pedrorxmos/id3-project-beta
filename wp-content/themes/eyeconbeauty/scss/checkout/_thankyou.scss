@@ -28,7 +28,7 @@
     .order_details {
       @include d-flex(column, 0.5rem);
       @include mq(min-width, $m-wd) {
-        font-size: 0.8333333rem;
+        //font-size: 0.8333333rem;
       }
 
       .payment-method-info {

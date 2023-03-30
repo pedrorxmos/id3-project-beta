@@ -68,6 +68,7 @@
       display: flex;
       align-items: stretch;
       background-color: $bg-color;
+      font-size: 1rem;
 
       @include mq(min-width, $l-wd) {
         border-radius: 0.833333rem;
@@ -88,12 +89,13 @@
         width: 100%;
         padding: 1rem 2rem;
         border-bottom: 1px solid $grey4;
+        
 
         @include mq(min-width, $l-wd) {
           border: none;
-          padding: 1rem 0.5rem;
+          //padding: 1rem 0.5rem;
           text-align: center;
-          font-size: 0.75rem;
+          //font-size: 0.75rem;
         }
       }
       

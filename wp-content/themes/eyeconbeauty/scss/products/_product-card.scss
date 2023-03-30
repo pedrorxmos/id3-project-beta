@@ -38,9 +38,9 @@
         color: $grey-color;
         font-weight: 400;
         text-transform: uppercase;
-        @include mq(min-width, $m-wd) {
-          font-size: 0.625em;
-        }
+        // @include mq(min-width, $m-wd) {
+        //   font-size: 0.625em;
+        // }
       }
 
       .product-info__name {
@@ -51,9 +51,9 @@
         font-weight: 600;
         text-transform: uppercase;
 
-        @include mq(min-width, $m-wd) {
-          font-size: 0.833333em;
-        }
+        // @include mq(min-width, $m-wd) {
+        //   font-size: 0.833333em;
+        // }
       }
 
       .product-info__price {
@@ -94,7 +94,7 @@
       }
 
       @include mq(min-width, $m-wd) {
-        font-size: 0.75em;
+        //font-size: 0.75em;
         .price {
           font-weight: 700;
           display: block;
@@ -109,7 +109,7 @@
       }
 
       @include mq(min-width, 1130px) {
-        font-size: 0.833333em;
+        //font-size: 0.833333em;
       }
     }
 
@@ -126,11 +126,11 @@
       font-weight: 500;
 
       @include mq(min-width, $m-wd) {
-        font-size: 0.75em;
+        //font-size: 0.75em;
       }
 
       @include mq(min-width, 1130px) {
-        font-size: 0.833333em;
+        //font-size: 0.833333em;
       }
     }
   }

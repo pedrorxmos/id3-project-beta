@@ -5,7 +5,7 @@
   font-size: 1.166667rem;
   font-weight: 500;
   @include mq(min-width, $m-wd) {
-    padding: 0.75rem;
+    // padding: 0.75rem;
     font-size: 1rem;
   }
 
@@ -29,8 +29,8 @@
     width: 100%;
 
     @include mq(min-width, $m-wd) {
-      padding-left: 1.666667rem;
-      padding-right: 1.666667rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 }

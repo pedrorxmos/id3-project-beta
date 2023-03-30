@@ -6,7 +6,7 @@
     padding-left: $l-pd;
 		padding-right: $l-pd;
     flex-direction: row;
-    gap: 2rem;
+    gap: 4rem;
   }
 
   @include mq(min-width, $xl-wd) {

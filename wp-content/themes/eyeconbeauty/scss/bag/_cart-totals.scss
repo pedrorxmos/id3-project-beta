@@ -11,7 +11,7 @@
       @include d-flex(column, 0.5rem);
 
       @include mq(min-width, $m-wd) {
-        font-size: 0.75rem;
+        //font-size: 0.75rem;
       }
     }
     
@@ -22,7 +22,7 @@
       &.order-total {
         font-size: 1.333333rem;
         @include mq(min-width, $m-wd) {
-          font-size: 1rem;
+          //font-size: 1rem;
         }
       }
     }

@@ -10,15 +10,15 @@
   z-index: 300;
 
   @include mq(min-width, $m-wd){
-    padding: 1.333333rem $m-pd 0;
+    padding: 25px $m-pd 0;
   }
 
   @include mq(min-width, $l-wd){
-    padding: 1.333333rem $l-pd 0;
+    padding: 25px $l-pd 0;
   }
 
   @include mq(min-width, $xl-wd){
-    padding: 1.333333rem $xl-pd 0;
+    padding: 25px $xl-pd 0;
   }
 
   .topbar-container {
@@ -40,7 +40,7 @@
     @include logo();
 
     @include mq(min-width, $m-wd){
-      font-size: 1rem;
+      // font-size: 1rem;
 
       @include logo(1.333333rem, $magenta-color);
     }
@@ -109,8 +109,8 @@
 
         @include mq(min-width, $m-wd){
           font-weight: 400;
-          font-size: 0.833333rem;
-          padding-bottom: 1.333333rem;
+          font-size: 1rem;
+          padding-bottom: 25px;
           
 
           &:hover {
@@ -199,10 +199,10 @@
       @include icon();
 
       @include mq(min-width, $m-wd){
-        height: 1.333333rem;
+        height: 1.666667rem;
         font-size: 0.75rem;
 
-        @include icon(1.333333rem);
+        @include icon(1.666667rem);
       }
       
       
@@ -235,6 +235,7 @@
 
       &.nav-bag {
         position: relative;
+        font-size: 1rem;
 
         .nav-bag__number {
           @include d-flex();
@@ -242,15 +243,26 @@
           align-items: center;
           position: absolute;
           z-index: 3;
-          font-size: 0.75em;
-          font-weight: 600;
+          font-size: 0.8333333em;
+          font-family: $font-family;
+          line-height: 0;
+          font-weight: 700;
           color: $bg-color;
           border-radius: 50%;
-          height: 1.333333em;
-          width: 1.333333em;
+          padding: 0.75em 0.45em 0.75em 0.55em;
+          // height: 1.5em;
+          // width: 1.5em;
           left: 70%;
           bottom: 70%;
           background-color: $magenta-color;
+          padding: auto;
+          @include mq(min-width, $m-wd) {
+            padding: 0.725em 0.45em 0.775em 0.55em;
+          }
+        }
+
+        @include mq(min-width, $m-wd) {
+          font-size: 0.833333rem;
         }
       }
     }
@@ -287,7 +299,7 @@
       align-items: center;
 
       @include mq(min-width, $m-wd){
-        font-size: 0.833333rem;
+        // font-size: 0.833333rem;
       }
 
       svg {
@@ -296,8 +308,8 @@
         stroke-width: 2px;
 
         @include mq(min-width, $m-wd){
-          width: 0.833333rem;
-          height: 0.833333rem;
+          // width: 0.833333rem;
+          // height: 0.833333rem;
         }
       }
       

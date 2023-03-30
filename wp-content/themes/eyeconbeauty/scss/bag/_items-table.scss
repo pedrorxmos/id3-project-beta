@@ -91,14 +91,14 @@
               font-size: 1rem;
               font-weight: 600;
               @include mq(min-width, $m-wd) {
-                font-size: 0.833333rem;
+                //font-size: 0.833333rem;
               }
             }
   
             .name__category {
               font-size: 0.833333rem;
               @include mq(min-width, $m-wd) {
-                font-size: 0.625rem;
+                //font-size: 0.625rem;
               }
             }
           }
@@ -108,7 +108,7 @@
             color: $text-color;
             font-weight: 400;
             @include mq(min-width, $m-wd) {
-              font-size: 0.833333rem;
+              //font-size: 0.833333rem;
             }
           }
         }
@@ -134,7 +134,7 @@
             font-size: 1.333333rem;
             gap: 1rem;
             @include mq(min-width, $m-wd) {
-              font-size: 0.833333rem;
+              //font-size: 0.833333rem;
             }
           }
   
@@ -147,7 +147,7 @@
             justify-content: center;
             align-items: center;
             @include mq(min-width, $m-wd) {
-              width: 1rem;
+              //width: 1rem;
             }
 
             svg {
@@ -190,8 +190,8 @@
                   margin: 0;
 }
               @include mq(min-width, $m-wd) {
-                width: 2rem;
-                font-size: 1rem;
+                //width: 2rem;
+                //font-size: 1rem;
                 margin: 0;
               }
             }
@@ -203,7 +203,7 @@
           color: $text-color;
           font-weight: 600;
           @include mq(min-width, $m-wd) {
-            font-size: 0.833333rem;
+            //font-size: 0.833333rem;
           }
         }
       }

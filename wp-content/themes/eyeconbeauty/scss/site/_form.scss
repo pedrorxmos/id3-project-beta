@@ -34,8 +34,8 @@
 		}
 
 		@include mq(min-width, $m-wd) {
-			font-size: 0.833333rem;
-			padding: 0.833333rem 1.666667rem;
+			// font-size: 0.833333rem;
+			// padding: 0.833333rem 1.666667rem;
 		}
 	}
 
@@ -43,7 +43,7 @@
 		padding-left: 0.333333rem;
 
 		@include mq(min-width, $m-wd) {
-			font-size: 0.833333rem;
+			// font-size: 0.833333rem;
 		}
 	}
 
@@ -77,7 +77,7 @@
 		@include d-flex(row, 1rem);
 		align-items: center;
     @include mq(min-width, $m-wd) {
-      font-size: 0.833333rem;
+      // font-size: 0.833333rem;
     }
 
 		input {
@@ -94,9 +94,9 @@
 			cursor: pointer;
 
 			@include mq(min-width, $m-wd) {
-				width: 1rem;
-				height: 1rem;
-				border-radius: 0.25rem;
+				// width: 1rem;
+				// height: 1rem;
+				// border-radius: 0.25rem;
 			}
 
 			&:checked {
@@ -107,7 +107,7 @@
 					content: '\2713';
 					font-size: 1.166667rem;
           @include mq(min-width, $m-wd) {
-            font-size: 0.833333rem;
+            // font-size: 0.833333rem;
           }
 					font-family: $font-family;
 					font-weight: 600;
@@ -132,7 +132,7 @@
 	a {
 		border-bottom: 1px solid $text-color;
     @include mq(min-width, $m-wd) {
-      font-size: 0.833333rem;
+      // font-size: 0.833333rem;
     }
 	}
 }
