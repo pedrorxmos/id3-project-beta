@@ -96,4 +96,3 @@ $base_var = (get_the_title() === 'Shimmer') ? 'bottle' : 'lavender-haze';
 		?>
 </div>
 
-

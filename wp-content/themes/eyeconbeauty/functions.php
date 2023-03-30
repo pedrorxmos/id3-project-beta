@@ -32,6 +32,8 @@
 			wp_enqueue_script ( 'js-infogroup', get_stylesheet_directory_uri() . '/js/info-groups.js', array('jquery'), '1.0.0', true, true );
 			wp_enqueue_script ( 'js-cartvardd', get_stylesheet_directory_uri() . '/js/cart-variation-dd.js', array('jquery'), '1.0.0', true, true );
 			wp_enqueue_script ( 'js-accountmenu', get_stylesheet_directory_uri() . '/js/account-menu.js', array('jquery'), '1.0.0', true, true );
+			wp_enqueue_script ( 'js-dropdown', get_stylesheet_directory_uri() . '/js/dropdown.js', array('jquery'), '1.0.0', true, true );
+			wp_enqueue_script ( 'js-productwrapper', get_stylesheet_directory_uri() . '/js/product-wrapper.js', array('jquery'), '1.0.0', true, true );
 
 			wp_enqueue_style ( 'css-main', get_stylesheet_uri(), '', filemtime ( get_template_directory() . '/style.css' ) );
 

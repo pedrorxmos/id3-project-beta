@@ -9,11 +9,7 @@
     font-size: 1rem;
   }
 
-  &.btn-product {
-    @include d-flex(row, 0);
-    justify-content: space-between;
-    width: 100%;
-  }
+  
   
   &.btn-main {
     background-color: $magenta-color;
@@ -25,5 +21,16 @@
   &.btn-secondary {
     background-color: $cyan-color;
     color: $text-color;
+  }
+
+  &.btn-product {
+    @include d-flex(row, 0);
+    justify-content: space-between;
+    width: 100%;
+
+    @include mq(min-width, $m-wd) {
+      padding-left: 1.666667rem;
+      padding-right: 1.666667rem;
+    }
   }
 }

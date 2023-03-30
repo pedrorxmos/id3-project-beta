@@ -43,7 +43,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 <?php do_action( 'woocommerce_before_variations_form' ); ?>
 
-<span class="product-wrapper__dropdown">
+<span class="product-wrapper__dropdown dropdown-button">
 	<div class="dropdown__title">
 		<img class="dd-title__img" src="https://esatdev.com/2022/pedroramos/eyeconbeauty/wp-content/uploads/2023/03/<?php echo $var ? $var : $base_var ?>-shade.png" alt="Shade color">
 		<p class="dd-title__name"><?php echo $var_name ? $var_name : $base_name_var ?></p>
@@ -61,7 +61,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 <?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
 	<p class="stock out-of-stock"><?php echo esc_html( apply_filters( 'woocommerce_out_of_stock_message', __( 'This product is currently out of stock and unavailable.', 'woocommerce' ) ) ); ?></p>
 <?php else : ?>
-	<table class="variations product-wrapper__table" cellspacing="0" role="presentation">
+	<table class="variations product-wrapper__table dropdown-content" cellspacing="0" role="presentation">
 		<tbody>
 			<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 				<tr>

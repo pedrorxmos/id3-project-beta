@@ -1,10 +1,45 @@
 .image-carousel {
   margin-bottom: 30px;
 
+  @include mq(min-width, $l-wd) {
+    flex: 1.5;
+    height: fit-content;
+  }
+
   .image-carousel__img {
-    width: 84vw;
-    height: 100vw;
+    width: 75vw;
+    height: auto;
     margin-right: 10px;
+
+    @include mq(min-width, 500px) {
+      width: 70vw;
+      height: auto;
+    }
+
+    @include mq(min-width, 600px) {
+      width: 65vw;
+      height: auto;
+    }
+
+    @include mq(min-width, 700px) {
+      width: 60vw;
+      height: auto;
+    }
+
+    @include mq(min-width, $m-wd) {
+      width: 50vw;
+      height: auto;
+    }
+
+    @include mq(min-width, $l-wd) {
+      width: 400px;
+      height: auto;
+    }
+
+    @include mq(min-width, $xl-wd) {
+      width: 500px;
+      height: auto;
+    }
 
     img {
       height: 100%;

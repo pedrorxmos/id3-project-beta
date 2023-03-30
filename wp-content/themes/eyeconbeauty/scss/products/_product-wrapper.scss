@@ -1,10 +1,17 @@
 .product-wrapper {
   background-color: $bg-color;
-  padding: 2rem 27px 2.666667rem;
+  padding: 2rem $s-pd 2.666667rem;
   @include d-flex(column, 0.5rem);
-  position: sticky;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  width: 100%;
   transition: gap 0.3s;
+
+  @include mq(min-width, $l-wd) {
+    padding: 0;
+    position: static;
+  }
 
   .qty-input, .quantity {
     display: none;
@@ -17,10 +24,15 @@
     border-bottom: 1px solid $text-color;
     @include d-flex(row, 0);
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
     padding: 1rem 2rem;
     color: inherit;
     font-size: 1rem;
+
+    @include mq(min-width, $m-wd) {
+			font-size: 0.833333rem;
+			padding: 0.833333rem 1.666667rem;
+		}
 
     .dropdown__title {
       @include d-flex(row, 8px);
@@ -28,6 +40,11 @@
       img {
         height: 1.5rem;
         width: 1.5rem;
+
+        @include mq(min-width, $m-wd) {
+          height: 1.25rem;
+          width: 1.25rem;
+        }
       }
     }
 
@@ -35,6 +52,11 @@
       width: 20px;
       height: 20px;
       stroke: $text-color;
+
+      @include mq(min-width, $m-wd) {
+        height: 1rem;
+        width: 1rem;
+      }
 
       &.down {
         display: block;
@@ -65,7 +87,7 @@
           display: block;
 
           .wpcvs-terms {
-            @include d-flex(row, 0px);
+            @include d-flex(row, auto);
             flex-wrap: wrap;
             justify-content: center;
 
@@ -73,6 +95,14 @@
               display: block;
               float: unset;
               padding: 1px;
+
+              width: 40px;
+              height: 40px;
+
+              @include mq(min-width, 600px) {
+                width: 30px;
+                height: 30px;
+              }
 
               span {
                 width: 100%;
