@@ -107,7 +107,7 @@
       <?php if ($wc_query->have_posts()) : ?>
       <?php while ($wc_query->have_posts()) : $wc_query->the_post(); ?>
         <div class="product-card product-slider__card">
-        <a href="<?php the_permalink() ?>"
+        <a href="<?php the_permalink() ?>">
             <?php the_post_thumbnail();?>
           </a>
           
