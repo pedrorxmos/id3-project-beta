@@ -5,12 +5,12 @@ dropdown.forEach((dd) => {
     const parent = dd.parentElement;
     const content = parent.querySelector('.dropdown-content');
 
-    parent.classList.toggle('open');
-    if (content.style.maxHeight) {
+    if (parent.classList.contains('open')) {
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
     }
     
+    parent.classList.toggle('open');
   })
 })
