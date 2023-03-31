@@ -10,21 +10,25 @@
   z-index: 300;
 
   @include mq(min-width, $m-wd){
-    padding: 25px $m-pd 0;
+    padding: 0 $m-pd;
   }
 
   @include mq(min-width, $l-wd){
-    padding: 25px $l-pd 0;
+    padding: 0 $l-pd;
   }
 
   @include mq(min-width, $xl-wd){
-    padding: 25px $xl-pd 0;
+    padding: 0 $xl-pd;
   }
 
   .topbar-container {
     @include d-flex(row, 0);
     justify-content: space-between;
     align-items: flex-start;
+
+    @include mq(min-width, $m-wd){
+      align-items: center;
+    }
   }
 
   .logo {
@@ -81,7 +85,7 @@
       @include mq(min-width, $m-wd){
         flex-direction: row;
         justify-content: center;
-        gap: 3rem;
+        gap: 2rem;
       }
 
       .menu-item {
@@ -110,11 +114,14 @@
         @include mq(min-width, $m-wd){
           font-weight: 400;
           font-size: 1rem;
-          padding-bottom: 25px;
+          border-bottom: 2px solid transparent;
+          
+          a {
+            padding: 1.75rem 1.25rem;
+          }
           
 
           &:hover {
-            padding-bottom: calc(1.333333rem - 2px);
             border-bottom: 2px solid $magenta-color;
             .sub-menu {
               @include d-flex(row, 2rem);
@@ -122,15 +129,16 @@
               background-color: $bg-color;
 
               @include mq(min-width, $m-wd) {
-                padding: 1.666667rem $m-pd;
+                padding: 0 $m-pd;
+                justify-content: center;
               }
 
               @include mq(min-width, $l-wd) {
-                padding: 1.666667rem $l-pd;
+                padding: 0 $l-pd;
               }
 
               @include mq(min-width, $xl-wd) {
-                padding: 1.666667rem $xl-pd;
+                padding: 0 $xl-pd;
               }
 
               top: 100%;
@@ -140,13 +148,22 @@
               border-top: none;
 
               .menu-item {
-                font-size: 0.8333335rem;
-                padding-bottom: 0;
-                border-bottom: 2px solid transparent;
+                font-size: 1rem;
                 
-                &:hover {
-                  border-bottom-color: $cyan-color;
+
+                @include mq(min-width, $m-wd) {
+                  border-bottom: 2px solid transparent;
+
+                  a {
+                    padding: 1.666667rem;
+                  }
+
+                  &:hover {
+                    border-bottom-color: $cyan-color;
+                  }
                 }
+
+                
               }
             }
           }
