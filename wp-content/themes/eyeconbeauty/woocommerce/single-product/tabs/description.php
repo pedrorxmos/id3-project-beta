@@ -24,7 +24,7 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
 ?>
 
 <div class="info-group open">
-	<button class="info-group__toggle">
+	<button class="info-group__toggle dropdown-button">
 	<?php if ( $heading ) : ?>
 	<?php echo esc_html( $heading ); ?>
 	<?php endif; ?>
@@ -38,7 +38,7 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
 		</svg>
 
 	</button>
-	<p class="info-group__content">
+	<p class="info-group__content dropdown-content">
 		<?php echo get_the_content() ?>
 	</p>
 </div>

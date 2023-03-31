@@ -30,7 +30,13 @@
       }
     }
 
-    &.open {
+    @include mq(min-width, $l-wd) {
+      display: none;
+    }
+  }
+
+  &.open {
+    .account__dropdown {
       .toggle-icon {
     
         &.down {
@@ -41,10 +47,6 @@
           display: block;
         }
       }
-    }
-
-    @include mq(min-width, $l-wd) {
-      display: none;
     }
   }
 

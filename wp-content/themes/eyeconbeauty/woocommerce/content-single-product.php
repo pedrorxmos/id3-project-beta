@@ -89,7 +89,7 @@ if ( post_password_required() ) {
 					<?php while ( have_rows ( 'custom_prod_attributes' ) ) : the_row(); ?>
 
 					<div class="info-group">
-						<button class="info-group__toggle">
+						<button class="info-group__toggle dropdown-button">
 							<?php echo get_sub_field ( 'attr_name' ); ?>
 							
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="toggle-icon minus">
@@ -101,7 +101,7 @@ if ( post_password_required() ) {
 							</svg>
 
 						</button>
-						<p class="info-group__content">
+						<p class="info-group__content dropdown-content">
 							<?php echo get_sub_field ( 'attr_content' ); ?>
 						</p>
 					</div>

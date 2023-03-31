@@ -58,7 +58,7 @@ do_action( 'woocommerce_before_account_navigation' );
 ?>
 
 <nav class="account__navigation woocommerce-MyAccount-navigation">
-	<span class="account__dropdown">
+	<span class="account__dropdown dropdown-button">
 		<?php echo  $current_tab;?>
 
 		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="toggle-icon down">
@@ -70,7 +70,7 @@ do_action( 'woocommerce_before_account_navigation' );
 		</svg>
 	</span>
 
-	<ul class="account__items">
+	<ul class="account__items dropdown-content">
 		<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 			<li class="account__item <?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">
 				<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"><?php echo esc_html( $label );?></a>

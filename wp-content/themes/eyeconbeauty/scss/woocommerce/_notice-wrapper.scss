@@ -1,6 +1,23 @@
 .woocommerce-notices-wrapper {
-  padding: 0 27px 1rem;
+  padding: 0 $s-pd 1rem;
   @include d-flex(column, 0.5rem);
+
+  @include max-width-center();
+
+	@include mq(min-width, $m-wd) {
+    padding-left: $m-pd;
+		padding-right: $m-pd;
+  }
+
+  @include mq(min-width, $l-wd) {
+    padding-left: $l-pd;
+		padding-right: $l-pd;
+  }
+
+  @include mq(min-width, $xl-wd) {
+    padding-left: $xl-pd;
+		padding-right: $xl-pd;
+  }
 
   &:empty {
     display: none;
