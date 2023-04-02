@@ -8,37 +8,37 @@
 
   .image-carousel__img {
     width: 75vw;
-    height: auto;
+    height: 89.33vw;
     margin-right: 10px;
 
     @include mq(min-width, 500px) {
       width: 70vw;
-      height: auto;
+      height: 83.37vw;
     }
 
     @include mq(min-width, 600px) {
       width: 65vw;
-      height: auto;
+      height: 77.42vw;
     }
 
     @include mq(min-width, 700px) {
       width: 60vw;
-      height: auto;
+      height: 71.46vw;
     }
 
     @include mq(min-width, $m-wd) {
       width: 50vw;
-      height: auto;
+      height: 59.55vw;
     }
 
     @include mq(min-width, $l-wd) {
       width: 400px;
-      height: auto;
+      height: 476.41px;
     }
 
     @include mq(min-width, $xl-wd) {
       width: 500px;
-      height: auto;
+      height: 595.51px;
     }
 
     img {
